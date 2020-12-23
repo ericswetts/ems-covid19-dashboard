@@ -20,31 +20,23 @@ import matplotlib as mpl
 
 get_ipython().run_line_magic('matplotlib', 'inline')
 
-#remove print limit to better explore dataframe data
-pd.set_option('display.max_rows', 300)
-
-
-# In[29]:
-
+# remove print limit to better explore dataframe data
+# NOTE: Many functions related to writing API call data has been removed. Please
+# see process_data.ipynb (Jupyter Notebook) format for setter code. For the live
+# deployment of this app, all API calls will be made at loadtime.
 
 #helper function to make API call
 def make_api_call():
-    response = requests.get('https://coronavirus-tracker-api.herokuapp.com/v2/locations?timelines=1')
-    timeline_json = response.json()
-    
     try:
-        with open('../api_data/timeline_json.json', 'w') as f:
-          json.dump(timeline_json, f, ensure_ascii=False)
-        
-        #updating API log
-        update_api_log(date.today())
-        
+        response = requests.get('https://coronavirus-tracker-api.herokuapp.com/v2/locations?timelines=1')
+        timeline_json = response.json()
         return timeline_json
     
     except Exception as e:
         print('Error making API call: ', e)
 
 #helper function to load previously loaded api data
+
 def use_existing_api_data():
     try:
         timeline_json = json.load(open('../api_data/timeline_json.json'))
@@ -53,16 +45,6 @@ def use_existing_api_data():
         print('Error reading existing JSON file: ', e)
 
 #helper function to update api call log
-def update_api_log(date):
-    string_date = str(date)
-    try:
-        with open('../api_data/api_call_log.csv', 'a', newline='') as write_obj:
-            csv_writer = writer(write_obj)
-            csv_writer.writerow([string_date])
-
-    except Exception as e:
-        print('Error updating API log: ', e)
-        
 def up_to_date_check():
     today = str(date.today())
     log = pd.read_csv('../api_data/api_call_log.csv')
@@ -80,7 +62,7 @@ def get_raw_data():
 
 def process_raw_data():
 
-#import ISO3 data for Dash Plotly Choropletyh mapping
+#import ISO3 data for Dash Plotly Choropleth mapping
     iso3 = pd.read_csv("../geodata/ISO3.csv",  index_col = 0)
     location_data = get_raw_data()['locations']
     
@@ -111,6 +93,8 @@ def process_raw_data():
         country_data['Deaths per 1M'] = (country_data['Deaths'] /  country_data['Population']* 1000000).round(1)
         country_data['Change in Deaths (n)'] = country_data['Deaths'].diff()
         country_data['Change in Deaths (pct)'] = country_data['Deaths'].pct_change().round(2)
+        country_data['Change in Cases (n)'] = country_data['Cases'].diff()
+        country_data['Change in Cases (pct)'] = country_data['Cases'].pct_change().round(2)
         country_data['Multiple_Territories'] = country_data['Country'].isin(['China', 'Canada', 'United Kingdom', 'France', 'Australia', 'Netherlands', 'Denmark'])
         
         #Date-related Variables
@@ -150,9 +134,13 @@ def get_chart_ready_df():
                         'Deaths':'sum',
                         'Deaths per 1M':'sum',
                         'Cases': 'sum',
-                        'Cases per 1M' : 'sum'
+                        'Cases per 1M' : 'sum',
+                        'Change in Deaths (n)' : 'sum',
+                        'Change in Cases (n)' : 'sum',
+                        'Change in Deaths (pct)' : 'max',
+                        'Change in Cases (pct)' : 'max'
                     }).reset_index()
 
-    chart_ready_df.to_csv('../api_data/chart_ready.csv')
+#     chart_ready_df.to_csv('../api_data/chart_ready.csv')
     return chart_ready_df
 
