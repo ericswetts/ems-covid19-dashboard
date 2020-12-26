@@ -53,9 +53,8 @@ def up_to_date_check():
 
 #helper function to load data (cached or via new API call) for webapp
 def get_raw_data():
-    raw_data = use_existing_api_data() if up_to_date_check else make_api_call()
-    return raw_data
-
+#     raw_data = use_existing_api_data() if up_to_date_check else make_api_call()
+        return make_api_call()
 
 # In[4]:
 
