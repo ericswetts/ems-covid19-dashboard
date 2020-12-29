@@ -492,7 +492,7 @@ def close_modal(click, is_open):
 
 #For Production
 if __name__ == '__main__':
-    app.run_server(debug=False)
+    app.run_server(debug=True)
 
 
 
