@@ -284,6 +284,7 @@ page_copy = dbc.Col(
 
 #Initialize Dash App
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+server = app.server
 
 # for app development:
 # app = JupyterDash(__name__, external_stylesheets = external_stylesheets)
