@@ -1,0 +1,33 @@
+/* #CSS Foir positioning Fixed Header */
+.controls  {
+    position : fixed;
+    top : 0;
+    left: 0;
+    right : 0;
+    width: 100%;
+    padding: 2rem 1rem;
+    z-index : 1000; 
+    background-color: #ede7c6;
+    font-size : 14px
+}
+
+/* the styles for the main content position it to the right of the sidebar and add some padding. */
+.content {
+    position : relative;
+    margin-top: 200px;
+    z-index : 0; 
+    font-size : 14px
+}
+
+.intro-text {
+    background-color:darkslategrey;
+    color : #ede7c7;
+    font-size : 11px;
+    padding : 5px 10px 5px 5px
+}
+
+
+#intro-modal {
+    z-index: 2000;
+    font-size: 14px
+}

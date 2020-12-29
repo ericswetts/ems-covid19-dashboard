@@ -17,8 +17,6 @@ from datetime import date
 import matplotlib.pyplot as plt
 import matplotlib as mpl
 
-get_ipython().run_line_magic('matplotlib', 'inline')
-
 # remove print limit to better explore dataframe data
 # NOTE: Many functions related to writing API call data has been removed. Please
 # see process_data.ipynb (Jupyter Notebook) format for setter code. For the live
@@ -88,10 +86,10 @@ def process_raw_data():
         country_data['Latitude'], country_data['Longitude'] =  [*loc['coordinates'].values()]
         country_data['Cases per 1M'] = (country_data['Cases'] /  country_data['Population']* 1000000).round(1)
         country_data['Deaths per 1M'] = (country_data['Deaths'] /  country_data['Population']* 1000000).round(1)
-        country_data['Change in Deaths (n)'] = country_data['Deaths'].diff()
-        country_data['Change in Deaths (pct)'] = country_data['Deaths'].pct_change().round(2)
-        country_data['Change in Cases (n)'] = country_data['Cases'].diff()
-        country_data['Change in Cases (pct)'] = country_data['Cases'].pct_change().round(2)
+        country_data['New Deaths (n)'] = country_data['Deaths'].diff()
+#         country_data['Change in Deaths (pct)'] = country_data['Deaths'].pct_change().round(2)
+        country_data['New Cases (n)'] = country_data['Cases'].diff()
+#         country_data['Change in Cases (pct)'] = country_data['Cases'].pct_change().round(2)
         country_data['Multiple_Territories'] = country_data['Country'].isin(['China', 'Canada', 'United Kingdom', 'France', 'Australia', 'Netherlands', 'Denmark'])
         
         #Date-related Variables
@@ -132,10 +130,10 @@ def get_chart_ready_df():
                         'Deaths per 1M':'sum',
                         'Cases': 'sum',
                         'Cases per 1M' : 'sum',
-                        'Change in Deaths (n)' : 'sum',
-                        'Change in Cases (n)' : 'sum',
-                        'Change in Deaths (pct)' : 'max',
-                        'Change in Cases (pct)' : 'max'
+                        'New Deaths (n)' : 'sum',
+                        'New Cases (n)' : 'sum'
+#                         'Change in Deaths (pct)' : 'max',
+#                         'Change in Cases (pct)' : 'max'
                     }).reset_index()
 
 #     chart_ready_df.to_csv('../api_data/chart_ready.csv')
