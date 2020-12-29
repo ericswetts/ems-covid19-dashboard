@@ -2,20 +2,14 @@
 # coding: utf-8
 
 # In[27]:
-
-
 import numpy as np
 import pandas as pd
 import json
 from csv import writer
 import requests
-import seaborn as sns
-import datetime
-import os
-import plotly.express as px
 from datetime import date
-import matplotlib.pyplot as plt
-import matplotlib as mpl
+# import os
+
 
 # remove print limit to better explore dataframe data
 # NOTE: Many functions related to writing API call data has been removed. Please
