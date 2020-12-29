@@ -3,6 +3,7 @@ certifi
 chardet
 click
 dash
+dash_bootstrap_components
 dash-core-components
 dash-html-components
 dash-renderer
