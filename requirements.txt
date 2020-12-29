@@ -1,6 +1,5 @@
 brotli
 certifi
-certifi
 chardet
 click
 cycler
@@ -14,11 +13,8 @@ flask-compress
 future
 idna
 itsdangerous
-itsdangerous
-Jinja2
 Jinja2
 kiwisolver
-MarkupSafe
 MarkupSafe
 matplotlib
 numpy
@@ -28,9 +24,7 @@ plotly
 pyparsing
 python-dateutil
 pytz
-pytz
 requests
-retrying
 retrying
 scipy
 six
