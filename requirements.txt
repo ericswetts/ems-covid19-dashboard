@@ -11,6 +11,7 @@ Flask
 flask
 flask-compress
 future
+gunicorn
 idna
 itsdangerous
 Jinja2
