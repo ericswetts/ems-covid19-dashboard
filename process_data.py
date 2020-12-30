@@ -130,6 +130,6 @@ def get_chart_ready_df():
 #                         'Change in Cases (pct)' : 'max'
                     }).reset_index()
 
-#     chart_ready_df.to_csv('../api_data/chart_ready.csv')
+    # chart_ready_df.to_csv('chart_ready.csv')
     return chart_ready_df
 
