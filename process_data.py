@@ -8,6 +8,10 @@ import json
 from csv import writer
 import requests
 from datetime import date
+
+#For Heroku PSQL integration
+from flask_sqlalchemy import SQLAlchemy
+from flask import Flask
 # import os
 
 
@@ -49,11 +53,11 @@ def get_raw_data():
 # In[4]:
 
 
-def process_raw_data():
+def json_to_df(raw_data):
 
 #import ISO3 data for Dash Plotly Choropleth mapping
     iso3 = pd.read_csv("geodata/ISO3.csv",  index_col = 0)
-    location_data = get_raw_data()['locations']
+    location_data = raw_data['locations']
     
     #create empty list to compile country-level data
     data_rows = []
@@ -108,11 +112,9 @@ def process_raw_data():
 # for countries with multiple provinces listed. This allows our graphs 
 # to render country-level statistics
 
-def get_chart_ready_df():
-    df = process_raw_data()
-
-    chart_ready_df = df.groupby(
-                        ['Country', 
+def create_chart_ready_df(df):
+    chart_ready_df = df.groupby([
+                        'Country', 
                         'Population', 
                         'Date', 
                         'ISO-3', 
@@ -126,10 +128,8 @@ def get_chart_ready_df():
                         'Cases per 1M' : 'sum',
                         'New Deaths (n)' : 'sum',
                         'New Cases (n)' : 'sum'
-#                         'Change in Deaths (pct)' : 'max',
-#                         'Change in Cases (pct)' : 'max'
-                    }).reset_index()
-
-    # chart_ready_df.to_csv('chart_ready.csv')
+                    })
+    chart_ready_df.reset_index(inplace = True)
+    chart_ready_df.index.rename('id', inplace = True)
+    chart_ready_df.index.astype(int)
     return chart_ready_df
-

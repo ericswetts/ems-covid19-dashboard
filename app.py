@@ -2,8 +2,7 @@
 # coding: utf-8
 
 # In[347]:
-
-
+from flask_sqlalchemy import SQLAlchemy
 from pandas.io.parsers import read_csv
 import plotly.express as px
 import plotly.graph_objects as go
@@ -17,10 +16,14 @@ import numpy as np
 # import requests
 import dash_table
 
+#for Heroku Flask deployment
+from flask_sqlalchemy import SQLAlchemy
+from flask import Flask
+
 
 #import data preprocessing function
-from process_data import get_chart_ready_df, up_to_date_check, process_raw_data, make_api_call
-
+from db_api_methods import get_from_db
+#Import db getter/setter methods
 #Bootstrap frontend framework
 import dash_bootstrap_components as dbc
 
@@ -34,11 +37,12 @@ external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css', dbc.themes
 
 # In[348]:
 
+df_columns = ['id', 'Country','Population','Date','ISO-3','Multiple_Territories','Month and Year','Day','Deaths','Deaths per 1M','Cases','Cases per 1M','New Deaths (n)','New Cases (n)']
 
 try:
-    df_map = get_chart_ready_df()
-    df_map['Day'] = df_map['Day'].astype(int)
-    print('pulled from API call')
+    result = get_from_db('public.chart_ready')
+    df_map = pd.DataFrame(result, columns = df_columns).set_index('id') 
+    print('Successfully pulled data from Heroku psql db')
     
 except Exception as e:
     # df_map = pd.read_csv('../api_data/chart_ready.csv', parse_dates = ['Date'], index_col = 0)
@@ -46,6 +50,7 @@ except Exception as e:
     print(e)
 
 #Last Updated variable
+df_map['Date'] = pd.to_datetime(df_map['Date'])
 last_updated = df_map['Date'].max().date().strftime("%B %d, %Y")
 
 #Date Range for DatePicker
@@ -283,11 +288,19 @@ page_copy = dbc.Col(
 
 
 #Initialize Dash App
-app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
-server = app.server
+server = Flask(__name__)
+app = dash.Dash(__name__, external_stylesheets=external_stylesheets, suppress_callback_exceptions=True)
+app.server.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 # for app development:
 # app = JupyterDash(__name__, external_stylesheets = external_stylesheets)
+
+#For live heroku database connection
+
+app.server.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://uzewvaalfzgguu:172f70cfc760489384a4ccb4d118c1c29aba8\
+98dd9670b08fbc45ccae18cf54e@ec2-54-175-243-75.compute-1.amazonaws.com:5432/d2vg5i9noo69g1'
+
+db = SQLAlchemy(app.server)
 
 
 open_api_link = html.A('Open Coronavirus API', href = 'https://github.com/ExpDev07/coronavirus-tracker-api')
@@ -489,12 +502,9 @@ def close_modal(click, is_open):
 #For Development
 # import random
 # a = random.randint(1000,5000)
-# app.run_server(mode = 'external', port = a)
-
-#For Production
+# app.run_server(mode = 'external', port = a, debug = True)
 if __name__ == '__main__':
     app.run_server(debug=True)
-
 
 
 # In[ ]:
