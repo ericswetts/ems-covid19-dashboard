@@ -53,7 +53,7 @@ def get_from_db(table):
     results = Cursor.fetchall()
     Cursor.close()
     return results
-    
+
     
 def set_to_db (df, table):
     conn = connect()
