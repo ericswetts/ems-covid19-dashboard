@@ -289,8 +289,9 @@ page_copy = dbc.Col(
 
 #Initialize Dash App
 server = Flask(__name__)
-app = dash.Dash(__name__, external_stylesheets=external_stylesheets, suppress_callback_exceptions=True)
+app = dash.Dash(__name__, server = server, external_stylesheets=external_stylesheets, suppress_callback_exceptions=True)
 app.server.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
 
 # for app development:
 # app = JupyterDash(__name__, external_stylesheets = external_stylesheets)
