@@ -42,6 +42,7 @@ df_columns = ['id', 'Country','Population','Date','ISO-3','Multiple_Territories'
 try:
     result = get_from_db('public.chart_ready')
     df_map = pd.DataFrame(result, columns = df_columns).set_index('id') 
+    df_map[['Deaths per 1M','Cases per 1M', 'New Deaths (n)', 'New Cases (n)']] = df_map[['Deaths per 1M','Cases per 1M', 'New Deaths (n)', 'New Cases (n)']].astype(float).round(1)
     print('Successfully pulled data from Heroku psql db')
     
 except Exception as e:
