@@ -76,7 +76,6 @@ def copy_from_stringio(conn, df, table):
     # save dataframe to an in memory buffer
     buffer = StringIO()
     df.to_csv(buffer, index_label = 'id', header=False)
-    df.to_csv('fuckme.csv', index = 'id', header=True)
     print(df.columns)
     buffer.seek(0)
     
