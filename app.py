@@ -339,7 +339,7 @@ content = dbc.Container(
     
 )
 
-#Controls Footer
+#Controls Header
 controls = html.Div([
         dbc.Container([
             dbc.Row([
