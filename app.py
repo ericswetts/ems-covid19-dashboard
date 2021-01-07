@@ -37,12 +37,12 @@ external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css', dbc.themes
 
 # In[348]:
 
-df_columns = ['id', 'Country','Population','Date','ISO-3','Multiple_Territories','Month and Year','Day','Deaths','Deaths per 1M','Cases','Cases per 1M','New Deaths (n)','New Cases (n)']
+df_columns = ['id', 'Country','Population','Date','ISO-3','Multiple_Territories','Month and Year','Day','Deaths','Deaths per 1M','Cases','Cases per 1M','New Deaths (n)','New Cases (n)', 'New Deaths (SMA)', 'New Cases (SMA)']
 
 try:
     result = get_from_db('public.chart_ready')
     df_map = pd.DataFrame(result, columns = df_columns).set_index('id') 
-    df_map[['Deaths per 1M','Cases per 1M', 'New Deaths (n)', 'New Cases (n)']] = df_map[['Deaths per 1M','Cases per 1M', 'New Deaths (n)', 'New Cases (n)']].astype(float).round(1)
+    df_map[['Deaths per 1M','Cases per 1M', 'New Deaths (n)', 'New Cases (n)', 'New Deaths (SMA)', 'New Cases (SMA)']] = df_map[['Deaths per 1M','Cases per 1M', 'New Deaths (n)', 'New Cases (n)', 'New Deaths (SMA)', 'New Cases (SMA)']].astype(float).round(1)
     print('Successfully pulled data from Heroku psql db')
     
 except Exception as e:
@@ -77,7 +77,7 @@ countries = list(df_map.loc[:, 'Country'].unique())
 
 #helper method for rendering top 15 most affected countries for a given date
 def top_15(date_id = 0, metric = 'Deaths'):
-    return df_map.loc[df_map['id'] == date_id, ['Country', metric]]    .sort_values(metric, ascending = False).head(15)
+    return df_map.loc[df_map['id'] == date_id, ['Country', metric]].sort_values(metric, ascending = False).head(15)
 start_top_15 = top_15()
 
 
@@ -136,11 +136,13 @@ metric_dropdown = dbc.Col(
             {'label':'Cumulative Cases', 'value': 'Cases'},
             {'label':'Cumulative Cases per 1M', 'value': 'Cases per 1M'}, 
             {'label':'Daily Cases (n)', 'value': 'New Cases (n)'},
+            {'label':'Daily Cases (Smoothed)', 'value':'New Cases (SMA)'},
 
             #Confirmed Death Metrics
             {'label':'Cumulative Deaths', 'value': 'Deaths'},
             {'label':'Cumulative Deaths per 1M', 'value': 'Deaths per 1M'},
             {'label':'Daily Deaths (n)', 'value': 'New Deaths (n)'},
+            {'label':'Daily Deaths (Smoothed)', 'value':'New Deaths (SMA)'},
         ],
     value='Deaths',
     optionHeight = 25
@@ -159,7 +161,7 @@ country_dropdown = dbc.Col(
             options = [{'label': i, 'value' : i} for i in countries],
             multi = True, 
             style = {'fontSize': '14px'}, 
-            value = ['United States', 'Singapore', 'Brazil', 'France', 'Indonesia'], 
+            value = ['United States', 'Singapore', 'Brazil', 'France', 'United Arab Emirates'], 
             optionHeight = 25
         )
     ],
@@ -409,10 +411,13 @@ def update_line_chart(new_date_id, new_metric, new_countries):
         'Cases' : "COVID-19 Cumulative Case Count per Country", 
         'Cases per 1M' : 'COVID-19 Cumulative Population - Adjusted Cases (Per 1M)',
         'New Cases (n)' : 'COVID-19 Daily Case Count per Country',
+        'New Cases (SMA)' : 'COVID-19 Daily Case Count per Country (Smoothed)',
         
         'Deaths': "COVID-19 Cumulative Death Count per Country",
         'Deaths per 1M' : 'COVID-19 Cumulative Population - Adjusted Deaths (Per 1M)',
-        'New Deaths (n)' : 'COVID-19 Daily Deaths (n) per Country'
+        'New Deaths (n)' : 'COVID-19 Daily Deaths (n) per Country',
+        'New Deaths (SMA)' : 'COVID-19 Daily Death Count per Country (Smoothed)'
+
     }
     
     line_chart_df = df_map.loc[df_map['Country'].isin(new_countries)]
@@ -448,10 +453,12 @@ def update_top_15_title(new_date_id, new_metric):
         'Cases' : "Cumulative Cases", 
         'Cases per 1M' : 'Cumulative Population - Adjusted (Per 1M) Cases',
         'New Cases (n)' : 'Daily New Cases',
+        'New Cases (SMA)' : 'Daily New Cases (Smoothed)',
           
         'Deaths': "Cumulative Deaths",
         'Deaths per 1M' : 'Cumulative Population - Adjusted (Per 1M) Deaths',
-        'New Deaths (n)' : 'Daily New Deaths'
+        'New Deaths (n)' : 'Daily New Deaths',
+        'New Cases (SMA)' : 'Daily New Deaths (Smoothed)'
     }   
     new_date = pd.to_datetime(unique_dates.loc[new_date_id, ['Date']]).dt.strftime("%B %d, %Y").values[0]
     new_metric_title = data_table_titles[new_metric]
@@ -506,7 +513,7 @@ def close_modal(click, is_open):
 # a = random.randint(1000,5000)
 # app.run_server(mode = 'external', port = a, debug = True)
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run_server(debug=True, port = 8373)
 
 
 # In[ ]:

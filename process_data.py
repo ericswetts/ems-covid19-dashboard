@@ -132,4 +132,6 @@ def create_chart_ready_df(df):
     chart_ready_df.reset_index(inplace = True)
     chart_ready_df.index.rename('id', inplace = True)
     chart_ready_df.index.astype(int)
+    chart_ready_df['New Deaths (SMA)'] = chart_ready_df.groupby('Country')['New Deaths (n)'].transform(lambda x: x.rolling(14,0).mean())
+    chart_ready_df['New Cases (SMA)'] = chart_ready_df.groupby('Country')['New Cases (n)'].transform(lambda x: x.rolling(14, 0).mean())
     return chart_ready_df
