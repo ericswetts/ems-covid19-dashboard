@@ -392,7 +392,7 @@ def update_map(new_date_id, new_metric):
     )
     
     fig.update_geos(projection_type="natural earth")
-    fig.update_layout(height=600, margin={"r":10,"t":30,"l":10,"b":30})
+    fig.update_layout(height=450, margin={"r":10,"t":30,"l":10,"b":30})
     fig.update_layout(transition_duration=500)
     fig.update_layout(title_x=0.3, title_font_size = 16)
     fig.update_layout(coloraxis_colorbar = dict(thickness = 8))

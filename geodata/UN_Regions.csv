@@ -6,12 +6,12 @@ African Group,Benin,BEN
 African Group,Botswana,BWA
 African Group,Burkina Faso,BFA
 African Group,Burundi,BDI
-African Group,Cabo Verde,BDI
+African Group,Cabo Verde,CPV
 African Group,Cameroon,CMR
 African Group,Central African Republic,CAF
 African Group,Chad,TCD
 African Group,Comoros,COM
-African Group,Congo,COM
+African Group,Congo,COG
 African Group,Côte d'Ivoire,CIV
 African Group,Democratic Republic of the Congo,CZE
 African Group,Djibouti,DJI
@@ -19,7 +19,7 @@ African Group,Egypt,EGY
 African Group,Equatorial Guinea,GNQ
 African Group,Eritrea,ERI
 African Group,Ethiopia,ETH
-African Group,Eswatini,EST
+African Group,Eswatini,SWZ
 African Group,Gabon,GAB
 African Group,Gambia (Republic of The),GMB
 African Group,Ghana,GHA
@@ -28,7 +28,7 @@ African Group,Guinea-Bissau,GNB
 African Group,Kenya,KEN
 African Group,Lesotho,LSO
 African Group,Liberia,LBR
-African Group,Libya,LBR
+African Group,Libya,LBY
 African Group,Madagascar,MDG
 African Group,Malawi,MWI
 African Group,Mali,MLI
@@ -51,7 +51,7 @@ African Group,Sudan,SDN
 African Group,Togo,TGO
 African Group,Tunisia,TUN
 African Group,Uganda,UGA
-African Group,United Republic of Tanzania,GBR
+African Group,United Republic of Tanzania,TZA
 African Group,Zambia,ZMB
 African Group,Zimbabwe,ZWE
 Asia and the Pacific Group,Afghanistan,AFG
@@ -78,7 +78,7 @@ Asia and the Pacific Group,Lebanon,LBN
 Asia and the Pacific Group,Malaysia,MYS
 Asia and the Pacific Group,Maldives,MDV
 Asia and the Pacific Group,Marshall Islands,MHL
-Asia and the Pacific Group,Micronesia (Federated States of),MEX
+Asia and the Pacific Group,Micronesia (Federated States of),FSM
 Asia and the Pacific Group,Mongolia,MNG
 Asia and the Pacific Group,Myanmar,MMR
 Asia and the Pacific Group,Nauru,NRU
@@ -95,7 +95,7 @@ Asia and the Pacific Group,Saudi Arabia,SAU
 Asia and the Pacific Group,Singapore,SGP
 Asia and the Pacific Group,Solomon Islands,SLB
 Asia and the Pacific Group,Sri Lanka,LKA
-Asia and the Pacific Group,State of Palestine,LKA
+Asia and the Pacific Group,State of Palestine,PSE
 Asia and the Pacific Group,Syrian Arab Republic,SYR
 Asia and the Pacific Group,Tajikistan,TJK
 Asia and the Pacific Group,Thailand,THA
@@ -124,7 +124,7 @@ Eastern European Group,Lithuania,LTU
 Eastern European Group,Montenegro,MNE
 Eastern European Group,North Macedonia,PRK
 Eastern European Group,Poland,POL
-Eastern European Group,Republic of Moldova,QAT
+Eastern European Group,Republic of Moldova,MDA
 Eastern European Group,Romania,ROU
 Eastern European Group,Russian Federation,RUS
 Eastern European Group,Serbia,SRB

@@ -11,11 +11,6 @@ import pandas as pd
 import requests
 import os
 
-
-#Connect to db
-os.environ['DATABASE_URL'] = 'postgres://uzewvaalfzgguu:172f70cfc760489384a4ccb4d118c1c29aba898dd9670b08fbc45ccae18cf54e@ec2-54-175-243-75.compute-1.amazonaws.com:5432/d2vg5i9noo69g1'
-# DATABASE_URL = os.environ['DATABASE_URL']
-
 def connect():
     #set as env variable before deploying
     DATABASE_URL = os.environ['DATABASE_URL']
@@ -84,12 +79,11 @@ def copy_from_stringio(conn, df, table):
         cursor.copy_from(buffer, table, sep=",")
         conn.commit()
     except (Exception, psycopg2.DatabaseError) as error:
-        
         print("Error: %s" % error)
         conn.rollback()
         cursor.close()
         return 1
-    print("Successfully posted to Heroku DB")
+    print("Successfully posted to DB")
     cursor.close()
     
 #API get method
