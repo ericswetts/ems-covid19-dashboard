@@ -9,10 +9,10 @@
 ## Features:
 * View time-series data for all countries through the duration of the pandemic
 * View common epidemiological measures, such as:
-** Cumulative cases / deaths per country
-** Daily case / death count (incidence)
-** Population-adjusted case / death rate (per 1M)
-** Simple moving average Smoothed daily case / death count (incidence)
+  * Cumulative cases / deaths per country
+  * Daily case / death count (incidence)
+  * Population-adjusted case / death rate (per 1M)
+  * Simple moving average Smoothed daily case / death count (incidence)
 * View the top-15 most affected countries (per metric) on a selected day
 
 Thanks to Coronavirus Open API for providing the API!
