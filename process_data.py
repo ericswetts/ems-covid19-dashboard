@@ -4,53 +4,7 @@
 # In[27]:
 import numpy as np
 import pandas as pd
-import json
-from csv import writer
-import requests
 from datetime import date
-
-#For Heroku PSQL integration
-from flask_sqlalchemy import SQLAlchemy
-from flask import Flask
-# import os
-
-
-# remove print limit to better explore dataframe data
-# NOTE: Many functions related to writing API call data has been removed. Please
-# see process_data.ipynb (Jupyter Notebook) format for setter code. For the live
-# deployment of this app, all API calls will be made at loadtime.
-
-#helper function to make API call
-def make_api_call():
-    try:
-        response = requests.get('https://coronavirus-tracker-api.herokuapp.com/v2/locations?timelines=1')
-        timeline_json = response.json()
-        return timeline_json
-    
-    except Exception as e:
-        print('Error making API call: ', e)
-
-#helper function to load previously loaded API data
-def use_existing_api_data():
-    try:
-        timeline_json = json.load(open('../api_data/timeline_json.json'))
-        return timeline_json
-    except Exception as e:
-        print('Error reading existing JSON file: ', e)
-
-#helper function to update api call log
-def up_to_date_check():
-    today = str(date.today())
-    log = pd.read_csv('../api_data/api_call_log.csv')
-    last = log.loc[:,'date'].max()
-    return last == today
-
-#helper function to load data (cached or via new API call) for webapp
-def get_raw_data():
-#     raw_data = use_existing_api_data() if up_to_date_check else make_api_call()
-        return make_api_call()
-
-# In[4]:
 
 
 def json_to_df(raw_data):
