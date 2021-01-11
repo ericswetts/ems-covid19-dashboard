@@ -113,7 +113,7 @@ Kenya,KEN
 Kiribati,KIR
 Kuwait,KWT
 Kyrgyzstan,KGZ
-Lao People's Democratic Republic,LAO
+Laos,LAO
 Latvia,LVA
 Lebanon,LBN
 Lesotho,LSO
@@ -123,7 +123,7 @@ Liechtenstein,LIE
 Lithuania,LTU
 Luxembourg,LUX
 Macao,MAC
-"Macedonia, the former Yugoslav Republic of",MKD
+Macedonia,MKD
 Madagascar,MDG
 Malawi,MWI
 Malaysia,MYS
@@ -136,8 +136,8 @@ Mauritania,MRT
 Mauritius,MUS
 Mayotte,MYT
 Mexico,MEX
-"Micronesia, Federated States of",FSM
-"Moldova, Republic of",MDA
+Micronesia,FSM
+Moldova,MDA
 Monaco,MCO
 Mongolia,MNG
 Montenegro,MNE
@@ -229,10 +229,12 @@ Uruguay,URY
 Uzbekistan,UZB
 Vanuatu,VUT
 Venezuela,VEN
-Viet Nam,VNM
+Vietnam,VNM
 "Virgin Islands, British",VGB
 "Virgin Islands, U.S.",VIR
 Wallis and Futuna,WLF
 Yemen,YEM
 Zambia,ZMB
 Zimbabwe,ZWE
+Holy See,VAT
+Saint Kitts and Nevis,KNA

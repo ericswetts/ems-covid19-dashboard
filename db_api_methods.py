@@ -12,7 +12,6 @@ import requests
 import os
 
 def connect():
-    #set as env variable before deploying
     DATABASE_URL = os.environ['DATABASE_URL']
     
     """ Connect to the PostgreSQL database server """

@@ -13,7 +13,7 @@ African Group,Chad,TCD
 African Group,Comoros,COM
 African Group,Congo,COG
 African Group,Côte d'Ivoire,CIV
-African Group,Democratic Republic of the Congo,CZE
+African Group,Democratic Republic of the Congo,COD
 African Group,Djibouti,DJI
 African Group,Egypt,EGY
 African Group,Equatorial Guinea,GNQ
@@ -21,7 +21,7 @@ African Group,Eritrea,ERI
 African Group,Ethiopia,ETH
 African Group,Eswatini,SWZ
 African Group,Gabon,GAB
-African Group,Gambia (Republic of The),GMB
+African Group,Gambia,GMB
 African Group,Ghana,GHA
 African Group,Guinea,GIN
 African Group,Guinea-Bissau,GNB
@@ -46,12 +46,12 @@ African Group,Seychelles,SYC
 African Group,Sierra Leone,SLE
 African Group,Somalia,SOM
 African Group,South Africa,ZAF
-African Group,South Sudan,KOR
+African Group,South Sudan,SSD
 African Group,Sudan,SDN
 African Group,Togo,TGO
 African Group,Tunisia,TUN
 African Group,Uganda,UGA
-African Group,United Republic of Tanzania,TZA
+African Group,Tanzania,TZA
 African Group,Zambia,ZMB
 African Group,Zimbabwe,ZWE
 Asia and the Pacific Group,Afghanistan,AFG
@@ -66,7 +66,7 @@ Asia and the Pacific Group,North Korea,PRK
 Asia and the Pacific Group,Fiji,FJI
 Asia and the Pacific Group,India,IND
 Asia and the Pacific Group,Indonesia,IDN
-Asia and the Pacific Group,Iran (Islamic Republic of),IRN
+Asia and the Pacific Group,Iran,IRN
 Asia and the Pacific Group,Iraq,IRQ
 Asia and the Pacific Group,Japan,JPN
 Asia and the Pacific Group,Jordan,JOR
@@ -78,7 +78,7 @@ Asia and the Pacific Group,Lebanon,LBN
 Asia and the Pacific Group,Malaysia,MYS
 Asia and the Pacific Group,Maldives,MDV
 Asia and the Pacific Group,Marshall Islands,MHL
-Asia and the Pacific Group,Micronesia (Federated States of),FSM
+Asia and the Pacific Group,Micronesia,FSM
 Asia and the Pacific Group,Mongolia,MNG
 Asia and the Pacific Group,Myanmar,MMR
 Asia and the Pacific Group,Nauru,NRU
@@ -122,11 +122,11 @@ Eastern European Group,Hungary,HUN
 Eastern European Group,Latvia,LVA
 Eastern European Group,Lithuania,LTU
 Eastern European Group,Montenegro,MNE
-Eastern European Group,North Macedonia,PRK
+Eastern European Group,North Macedonia,MKD
 Eastern European Group,Poland,POL
-Eastern European Group,Republic of Moldova,MDA
+Eastern European Group,Moldova,MDA
 Eastern European Group,Romania,ROU
-Eastern European Group,Russian Federation,RUS
+Eastern European Group,Russia,RUS
 Eastern European Group,Serbia,SRB
 Eastern European Group,Slovakia,SVK
 Eastern European Group,Slovenia,SVN
@@ -136,7 +136,7 @@ Latin American and Caribbean Group (GRULAC),Argentina,ARG
 Latin American and Caribbean Group (GRULAC),Bahamas,BHS
 Latin American and Caribbean Group (GRULAC),Barbados,BRB
 Latin American and Caribbean Group (GRULAC),Belize,BLZ
-Latin American and Caribbean Group (GRULAC),Bolivia (Plurinational State of),BOL
+Latin American and Caribbean Group (GRULAC),Bolivia,BOL
 Latin American and Caribbean Group (GRULAC),Brazil,BRA
 Latin American and Caribbean Group (GRULAC),Chile,CHL
 Latin American and Caribbean Group (GRULAC),Colombia,COL
@@ -157,13 +157,13 @@ Latin American and Caribbean Group (GRULAC),Nicaragua,NIC
 Latin American and Caribbean Group (GRULAC),Panama,PAN
 Latin American and Caribbean Group (GRULAC),Paraguay,PRY
 Latin American and Caribbean Group (GRULAC),Peru,PER
-Latin American and Caribbean Group (GRULAC),Saint Kitts and Nevis,BLM
+Latin American and Caribbean Group (GRULAC),Saint Kitts and Nevis,KNA
 Latin American and Caribbean Group (GRULAC),Saint Lucia,LCA
 Latin American and Caribbean Group (GRULAC),Saint Vincent and the Grenadines,VCT
 Latin American and Caribbean Group (GRULAC),Suriname,SUR
 Latin American and Caribbean Group (GRULAC),Trinidad and Tobago,TTO
 Latin American and Caribbean Group (GRULAC),Uruguay,URY
-Latin American and Caribbean Group (GRULAC),Venezuela (Bolivarian Republic of),VEN
+Latin American and Caribbean Group (GRULAC),Venezuela,VEN
 Western European and Others Group (WEOG),Andorra,AND
 Western European and Others Group (WEOG),Australia,AUS
 Western European and Others Group (WEOG),Austria,AUT
@@ -191,6 +191,6 @@ Western European and Others Group (WEOG),Spain,ESP
 Western European and Others Group (WEOG),Sweden,SWE
 Western European and Others Group (WEOG),Switzerland,CHE
 Western European and Others Group (WEOG),Turkey,TUR
-Western European and Others Group (WEOG),United Kingdom of Great Britain and Northern Ireland,GBR
+Western European and Others Group (WEOG),GBR,GBR
 Western European and Others Group (WEOG),Holy See,VAT
 Western European and Others Group (WEOG),United States of America,USA

@@ -12,19 +12,19 @@ Rank,Country,Score,ISO-3
 10,Portugal,11.83,PRT
 11,Germany,12.16,DEU
 12,Belgium,12.57,BEL
-13,Ireland,12.60,IRL
+13,Ireland,12.6,IRL
 14,Estonia,12.61,EST
 15,Iceland,15.12,ISL
 16,Canada,15.29,CAN
 17,Luxembourg,15.46,LUX
 18,Austria,15.78,AUT
 19,Uruguay,15.79,URY
-20,Suriname,17.50,SUR
+20,Suriname,17.5,SUR
 21,Samoa,18.25,WSM
 22,Latvia,18.56,LVA
 23,Namibia,19.25,NAM
 24,Liechtenstein,19.52,LIE
-25,Cabo Verde,20.15,BDI
+25,Cabo Verde,20.15,CPV
 26,Australia,20.21,AUS
 27,Cyprus,20.45,CYP
 28,Lithuania,21.19,LTU
@@ -41,9 +41,9 @@ Rank,Country,Score,ISO-3
 39,Botswana,23.56,BWA
 40,Czech Republic,23.57,CZE
 41,Italy,23.69,ITA
-42,South Korea,23.70,KOR
-43,Taiwan,23.76,SYR
-44,OECS,23.78,NOR
+42,South Korea,23.7,KOR
+43,Taiwan,23.76,TWN
+44,OECS,23.78,
 45,United States,23.85,USA
 46,Papua New Guinea,23.93,PNG
 47,Senegal,23.99,SEN
@@ -52,37 +52,37 @@ Rank,Country,Score,ISO-3
 50,Tonga,27.27,TON
 51,Chile,27.31,CHL
 52,Fiji,27.41,FJI
-53,Belize,27.50,BLZ
+53,Belize,27.5,BLZ
 54,Madagascar,27.68,MDG
-55,Dominican Republic,27.90,DOM
+55,Dominican Republic,27.9,DOM
 56,Mauritius,28,MUS
 57,Niger,28.25,NER
 58,Bosnia-Herzegovina,28.51,BIH
 59,Croatia,28.51,HRV
 60,Georgia,28.59,GEO
-61,Armenia,28.60,ARM
+61,Armenia,28.6,ARM
 62,Poland,28.65,POL
 63,Seychelles,28.66,SYC
 64,Argentina,28.78,ARG
-65,Greece,28.80,GRC
+65,Greece,28.8,GRC
 66,Japan,28.86,JPN
-67,Bhutan,28.90,BTN
-68,Cte dIvoire,28.94,HRV
+67,Bhutan,28.9,BTN
+68,Cote D'Ivoire,28.94,CIV
 69,Malawi,29.32,MWI
-70,Kosovo,29.33,KIR
+70,Kosovo,29.33,
 71,Togo,29.33,TGO
 72,Tunisia,29.45,TUN
 73,Mongolia,29.61,MNG
-74,El Salvador,29.70,SLV
+74,El Salvador,29.7,SLV
 75,Comoros,29.77,COM
 76,Panama,29.78,PAN
-77,Northern Cyprus,29.79,PRK
-78,Timor-Leste,29.90,TLS
+77,Northern Cyprus,29.79,CYP
+78,Timor-Leste,29.9,TLS
 79,Maldives,29.93,MDV
 80,Hong Kong,30.01,HKG
 81,Malta,30.16,MLT
 82,Kyrgyzstan,30.19,KGZ
-83,Hati,30.20,HTI
+83,Hati,30.2,HTI
 84,Albania,30.25,ALB
 85,Sierra Leone,30.28,SLE
 86,Lesotho,30.45,LSO
@@ -90,10 +90,10 @@ Rank,Country,Score,ISO-3
 88,Israel,30.84,ISR
 89,Hungary,30.84,HUN
 90,Peru,30.94,PER
-91,Moldova,31.16,FSM
-92,North Macedonia,31.28,PRK
+91,Moldova,31.16,MDA
+92,North Macedonia,31.28,MKD
 93,Serbia,31.62,SRB
-94,Guinea Bissau,32.06,GIN
+94,Guinea Bissau,32.06,GNB
 95,Liberia,32.25,LBR
 96,Ukraine,32.52,UKR
 97,Mauritania,32.54,MRT
@@ -108,21 +108,21 @@ Rank,Country,Score,ISO-3
 106,Angola,33.92,AGO
 107,Brazil,34.05,BRA
 108,Mali,34.12,MLI
-109,Kuwait,34.30,KWT
+109,Kuwait,34.3,KWT
 110,Guinea,34.34,GIN
 111,Bulgaria,35.06,BGR
-112,Nepal,35.10,NPL
+112,Nepal,35.1,NPL
 113,Benin,35.11,BEN
 114,Bolivia,35.37,BOL
 115,Nigeria,35.63,NGA
 116,Guatemala,35.74,GTM
 117,Nicaragua,35.81,NIC
-118,Congo-Brazzaville,36.56,COD
+118,Congo-Brazzaville,36.56,COG
 119,Indonesia,36.82,IDN
 120,Zambia,37,ZMB
-121,Gabon,37.20,GAB
-122,Afghanistan,37.70,AFG
-123,Chad,39.70,TCD
+121,Gabon,37.2,GAB
+122,Afghanistan,37.7,AFG
+123,Chad,39.7,TCD
 124,Tanzania,40.25,TZA
 125,Uganda,40.95,UGA
 126,Zimbabwe,40.95,ZWE
@@ -132,26 +132,26 @@ Rank,Country,Score,ISO-3
 130,Colombia,42.66,COL
 131,United Arab Emirates,42.69,ARE
 132,Central African Republic,42.87,CAF
-133,Morocco  Western Sahara,42.88,MAR
+133,Morocco Western Sahara,42.88,MAR
 134,Cameroon,43.28,CMR
 135,Oman,43.42,OMN
 136,Philippines,43.54,PHL
-137,Palestine,44.09,PLW
-138,South Sudan,44.49,KOR
+137,Palestine,44.09,PSE
+138,South Sudan,44.49,SDN
 139,Myanmar,44.77,MMR
 140,Thailand,44.94,THA
-141,Eswatini,45.15,EST
+141,Eswatini,45.15,SWZ
 142,India,45.33,IND
 143,Mexico,45.45,MEX
 144,Cambodia,45.46,KHM
 145,Pakistan,45.52,PAK
 146,Algeria,45.52,DZA
 147,Venezuela,45.66,VEN
-148,Honduras,48.20,HND
+148,Honduras,48.2,HND
 149,Russia,48.92,RUS
-150,Democratic Republic of Congo,49.09,CZE
+150,Democratic Republic of Congo,49.09,COD
 151,Bangladesh,49.37,BGD
-152,Brunei,49.65,BRA
+152,Brunei,49.65,BRN
 153,Belarus,49.75,BLR
 154,Turkey,50.02,TUR
 155,Rwanda,50.34,RWA
@@ -163,7 +163,7 @@ Rank,Country,Score,ISO-3
 161,Tajikistan,55.34,TJK
 162,Iraq,55.37,IRQ
 163,Somalia,55.45,SOM
-164,Libya,55.77,LBR
+164,Libya,55.77,LBY
 165,Equatorial Guinea,56.38,GNQ
 166,Egypt,56.82,EGY
 167,Yemen,58.25,YEM
@@ -173,7 +173,7 @@ Rank,Country,Score,ISO-3
 171,Cuba,63.81,CUB
 172,Laos,64.28,LAO
 173,Iran,64.81,IRN
-174,Syria,72.57,CHE
+174,Syria,72.57,SYR
 175,Vietnam,74.71,VNM
 176,Djibouti,76.73,DJI
 177,China,78.48,CHN
