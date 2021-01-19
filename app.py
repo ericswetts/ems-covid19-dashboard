@@ -145,7 +145,7 @@ metric_dropdown = dbc.Col(
             {'label':'Daily Deaths (Smoothed)', 'value':'New Deaths (SMA)'},
         ],
     value='Deaths',
-    optionHeight = 25
+    optionHeight = 22
     )
     ],
     xs = 12,
@@ -162,7 +162,7 @@ country_dropdown = dbc.Col(
             multi = True, 
             style = {'fontSize': '14px'}, 
             value = ['United States', 'Singapore', 'Brazil', 'France', 'United Arab Emirates'], 
-            optionHeight = 25
+            optionHeight = 22
         )
     ],
     xs = 12,

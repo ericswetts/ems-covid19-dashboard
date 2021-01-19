@@ -24,14 +24,12 @@ Belize,BZ,BLZ,84,17.25,-88.75
 Benin,BJ,BEN,204,9.5,2.25
 Bermuda,BM,BMU,60,32.3333,-64.75
 Bhutan,BT,BTN,64,27.5,90.5
-"Bolivia, Plurinational State of",BO,BOL,68,-17,-65
 Bolivia,BO,BOL,68,-17,-65
 Bosnia and Herzegovina,BA,BIH,70,44,18
 Botswana,BW,BWA,72,-22,24
 Bouvet Island,BV,BVT,74,-54.4333,3.4
 Brazil,BR,BRA,76,-10,-55
 British Indian Ocean Territory,IO,IOT,86,-6,71.5
-Brunei Darussalam,BN,BRN,96,4.5,114.6667
 Brunei,BN,BRN,96,4.5,114.6667
 Bulgaria,BG,BGR,100,43,25
 Burkina Faso,BF,BFA,854,13,-2
@@ -185,15 +183,12 @@ Puerto Rico,PR,PRI,630,18.25,-66.5
 Qatar,QA,QAT,634,25.5,51.25
 Réunion,RE,REU,638,-21.1,55.6
 Romania,RO,ROU,642,46,25
-Russian Federation,RU,RUS,643,60,100
 Russia,RU,RUS,643,60,100
 Rwanda,RW,RWA,646,-2,30
 "Saint Helena, Ascension and Tristan da Cunha",SH,SHN,654,-15.9333,-5.7
 Saint Kitts and Nevis,KN,KNA,659,17.3333,-62.75
 Saint Lucia,LC,LCA,662,13.8833,-61.1333
 Saint Pierre and Miquelon,PM,SPM,666,46.8333,-56.3333
-Saint Vincent and the Grenadines,VC,VCT,670,13.25,-61.2
-Saint Vincent & the Grenadines,VC,VCT,670,13.25,-61.2
 St. Vincent and the Grenadines,VC,VCT,670,13.25,-61.2
 Samoa,WS,WSM,882,-13.5833,-172.3333
 San Marino,SM,SMR,674,43.7667,12.4167
@@ -220,7 +215,6 @@ Swaziland,SZ,SWZ,748,-26.5,31.5
 Sweden,SE,SWE,752,62,15
 Switzerland,CH,CHE,756,47,8
 Syrian Arab Republic,SY,SYR,760,35,38
-"Taiwan, Province of China",TW,TWN,158,23.5,121
 Taiwan,TW,TWN,158,23.5,121
 Tajikistan,TJ,TJK,762,39,71
 "Tanzania, United Republic of",TZ,TZA,834,-6,35
@@ -244,9 +238,7 @@ United States Minor Outlying Islands,UM,UMI,581,19.2833,166.6
 Uruguay,UY,URY,858,-33,-56
 Uzbekistan,UZ,UZB,860,41,64
 Vanuatu,VU,VUT,548,-16,167
-"Venezuela, Bolivarian Republic of",VE,VEN,862,8,-66
 Venezuela,VE,VEN,862,8,-66
-Viet Nam,VN,VNM,704,16,106
 Vietnam,VN,VNM,704,16,106
 "Virgin Islands, British",VG,VGB,92,18.5,-64.5
 "Virgin Islands, U.S.",VI,VIR,850,18.3333,-64.8333

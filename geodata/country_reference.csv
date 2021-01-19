@@ -1,0 +1,246 @@
+,Country,ISO-3,Group,Lat,Lon,WPFI Rank,WPFI Score,Life Exp 2018,Projection,Economy,WB Region,Income Group
+0,Afghanistan,AFG,Asia and the Pacific Group,33.0,65.0,122.0,37.7,64.486,9.721270051,Afghanistan,South Asia,Low income
+1,Åland Islands,ALA,,,,,,,,,,
+2,Albania,ALB,Eastern European Group,41.0,20.0,84.0,30.25,78.458,9.988291452,Albania,Europe & Central Asia,Upper middle income
+3,Algeria,DZA,African Group,28.0,3.0,146.0,45.52,76.693,8.982906713,Algeria,Middle East & North Africa,Lower middle income
+4,American Samoa,ASM,,-14.3333,-170.0,,,,9.999915385,American Samoa,East Asia & Pacific,Upper middle income
+5,Andorra,AND,Western European and Others Group (WEOG),42.5,1.6,37.0,23.23,,,Andorra,Europe & Central Asia,High income
+6,Angola,AGO,African Group,-12.5,18.5,106.0,33.92,60.782,9.465812755,Angola,Sub-Saharan Africa,Lower middle income
+7,Anguilla,AIA,,18.25,-63.1667,,,,,,,
+8,Antarctica,ATA,,-90.0,0.0,,,,,,,
+9,Antigua and Barbuda,ATG,Latin American and Caribbean Group (GRULAC),17.05,-61.8,,,76.885,9.99981282,Antigua and Barbuda,Latin America & Caribbean,High income
+10,Argentina,ARG,Latin American and Caribbean Group (GRULAC),-34.0,-64.0,64.0,28.78,76.52,8.829060541,Argentina,Latin America & Caribbean,Upper middle income
+11,Armenia,ARM,Eastern European Group,40.0,45.0,61.0,28.6,74.945,9.987949571,Armenia,Europe & Central Asia,Upper middle income
+12,Aruba,ABW,,12.5,-69.9667,,,76.152,9.999923932,Aruba,Latin America & Caribbean,High income
+13,Australia,AUS,Western European and Others Group (WEOG),-27.0,133.0,26.0,20.21,82.74878048779999,6.717949172000001,Australia,East Asia & Pacific,High income
+14,Austria,AUT,Western European and Others Group (WEOG),47.3333,13.3333,18.0,15.78,81.6926829268,9.964765808,Austria,Europe & Central Asia,High income
+15,Azerbaijan,AZE,Eastern European Group,40.5,47.5,168.0,8.48,72.86399999999999,9.964689312,Azerbaijan,Europe & Central Asia,Upper middle income
+16,Bahamas,BHS,Latin American and Caribbean Group (GRULAC),24.25,-76.0,,,73.752,9.995723076,"Bahamas, The",Latin America & Caribbean,High income
+17,Bahrain,BHR,Asia and the Pacific Group,26.0,50.55,169.0,60.13,77.163,9.999697436,Bahrain,Middle East & North Africa,High income
+18,Bangladesh,BGD,Asia and the Pacific Group,24.0,90.0,151.0,49.37,72.32,9.944372643,Bangladesh,South Asia,Lower middle income
+19,Barbados,BRB,Latin American and Caribbean Group (GRULAC),13.1667,-59.5333,,,79.081,9.999817093999999,Barbados,Latin America & Caribbean,High income
+20,Belarus,BLR,Eastern European Group,53.0,28.0,153.0,49.75,74.1756097561,9.913291442,Belarus,Europe & Central Asia,Upper middle income
+21,Belgium,BEL,Western European and Others Group (WEOG),50.8333,4.0,12.0,12.57,81.5951219512,9.987060682000001,Belgium,Europe & Central Asia,High income
+22,Belize,BLZ,Latin American and Caribbean Group (GRULAC),17.25,-88.75,53.0,27.5,74.49600000000001,9.99025299,Belize,Latin America & Caribbean,Upper middle income
+23,Benin,BEN,African Group,9.5,2.25,113.0,35.11,61.47,9.952727345,Benin,Sub-Saharan Africa,Lower middle income
+24,Bermuda,BMU,,32.3333,-64.75,,,81.6517073171,9.999979487000001,Bermuda,North America,High income
+25,Bhutan,BTN,Asia and the Pacific Group,27.5,90.5,67.0,28.9,71.46,9.98359316,Bhutan,South Asia,Lower middle income
+26,Bolivia,BOL,Latin American and Caribbean Group (GRULAC),-17.0,-65.0,114.0,35.37,71.23899999999999,9.538462337,Bolivia,Latin America & Caribbean,Lower middle income
+27,Bosnia and Herzegovina,BIH,Eastern European Group,44.0,18.0,58.0,28.51,77.262,9.97812051,Bosnia and Herzegovina,Europe & Central Asia,Upper middle income
+28,Botswana,BWA,African Group,-22.0,24.0,39.0,23.56,69.275,9.757808517,Botswana,Sub-Saharan Africa,Upper middle income
+29,Bouvet Island,BVT,,-54.4333,3.4,,,,,,,
+30,Brazil,BRA,Latin American and Caribbean Group (GRULAC),-10.0,-55.0,107.0,34.05,75.672,6.384615798,Brazil,Latin America & Caribbean,Upper middle income
+31,Brunei Darussalam,BRN,Asia and the Pacific Group,4.5,114.6667,152.0,49.65,75.722,9.997748717999999,Brunei Darussalam,East Asia & Pacific,High income
+32,Bulgaria,BGR,Eastern European Group,43.0,25.0,111.0,35.06,74.9634146341,9.953586319,Bulgaria,Europe & Central Asia,Upper middle income
+33,Burkina Faso,BFA,African Group,13.0,-2.0,38.0,23.47,61.174,9.883077764,Burkina Faso,Sub-Saharan Africa,Low income
+34,Burundi,BDI,African Group,-3.5,30.0,160.0,55.33,61.247,9.989026493999999,Burundi,Sub-Saharan Africa,Low income
+35,Cambodia,KHM,Asia and the Pacific Group,13.0,105.0,144.0,45.46,69.57,9.924564947999999,Cambodia,East Asia & Pacific,Lower middle income
+36,Cameroon,CMR,African Group,6.0,12.0,134.0,43.28,58.92100000000001,9.79798801,Cameroon,Sub-Saharan Africa,Lower middle income
+37,Canada,CAN,Western European and Others Group (WEOG),60.0,-95.0,16.0,15.29,81.9487804878,6.115384996,Canada,North America,High income
+38,Cape Verde,CPV,African Group,16.0,-24.0,25.0,20.15,72.782,9.998278632,Cabo Verde,Sub-Saharan Africa,Lower middle income
+39,Cayman Islands,CYM,,19.5,-80.5,,,,9.999889743999999,Cayman Islands,Latin America & Caribbean,High income
+40,Central African Republic,CAF,African Group,7.0,21.0,132.0,42.87,52.805,9.733761506,Central African Republic,Sub-Saharan Africa,Low income
+41,Chad,TCD,African Group,15.0,19.0,123.0,39.7,53.977,9.46153925,Chad,Sub-Saharan Africa,Low income
+42,Chile,CHL,Latin American and Caribbean Group (GRULAC),-30.0,-71.0,51.0,27.31,80.042,9.682137568,Chile,Latin America & Caribbean,High income
+43,China,CHN,Asia and the Pacific Group,35.0,105.0,177.0,78.48,76.704,6.012820881000001,China,East Asia & Pacific,Upper middle income
+44,Christmas Island,CXR,,-10.5,105.6667,,,,,,,
+45,Cocos (Keeling) Islands,CCK,,-12.5,96.8333,,,,,,,
+46,Colombia,COL,Latin American and Caribbean Group (GRULAC),4.0,-72.0,130.0,42.66,77.109,9.525641822,Colombia,Latin America & Caribbean,Upper middle income
+47,Comoros,COM,African Group,-12.1667,44.25,75.0,29.77,64.118,9.999205983,Comoros,Sub-Saharan Africa,Lower middle income
+48,Congo (Brazzaville),COG,African Group,-1.0,15.0,118.0,36.56,64.29,9.854060666,"Congo, Rep.",Sub-Saharan Africa,Lower middle income
+49,Congo (Kinshasa),COD,African Group,0.0,25.0,150.0,49.09,60.368,9.029915266,"Congo, Dem. Rep.",Sub-Saharan Africa,Low income
+50,Cook Islands,COK,,-21.2333,-159.7667,,,,,,,
+51,Costa Rica,CRI,Latin American and Caribbean Group (GRULAC),10.0,-84.0,7.0,10.53,80.095,9.978180339,Costa Rica,Latin America & Caribbean,Upper middle income
+52,Côte d'Ivoire,CIV,African Group,8.0,-5.0,68.0,28.94,57.422,9.864103402000001,Côte d'Ivoire,Sub-Saharan Africa,Lower middle income
+53,Côte d'Ivoire,CIV,African Group,8.0,-5.0,68.0,28.94,57.422,9.864103402000001,Côte d'Ivoire,Sub-Saharan Africa,Lower middle income
+54,Croatia,HRV,Eastern European Group,45.1667,15.5,59.0,28.51,78.0707317073,9.97696239,Croatia,Europe & Central Asia,High income
+55,Cuba,CUB,Latin American and Caribbean Group (GRULAC),21.5,-80.0,171.0,63.81,78.726,9.953069225,Cuba,Latin America & Caribbean,Upper middle income
+56,Cyprus,CYP,Asia and the Pacific Group,35.0,33.0,27.0,20.45,80.828,9.996052136,Cyprus,Europe & Central Asia,High income
+57,Cyprus,CYP,Asia and the Pacific Group,35.0,33.0,77.0,29.79,80.828,9.996052136,Cyprus,Europe & Central Asia,High income
+58,Czech Republic,CZE,Eastern European Group,49.75,15.5,40.0,23.57,79.02926829270001,9.96698803,Czech Republic,Europe & Central Asia,High income
+59,Denmark,DNK,Western European and Others Group (WEOG),56.0,10.0,3.0,8.13,80.9536585366,9.981868374,Denmark,Europe & Central Asia,High income
+60,Djibouti,DJI,African Group,11.5,43.0,176.0,76.73,66.582,9.990094871,Djibouti,Middle East & North Africa,Lower middle income
+61,Dominica,DMA,Latin American and Caribbean Group (GRULAC),15.4167,-61.3333,,,,9.999680342000001,Dominica,Latin America & Caribbean,Upper middle income
+62,Dominican Republic,DOM,Latin American and Caribbean Group (GRULAC),19.0,-70.6667,55.0,27.9,73.892,9.97935128,Dominican Republic,Latin America & Caribbean,Upper middle income
+63,Ecuador,ECU,Latin American and Caribbean Group (GRULAC),-2.0,-77.5,98.0,32.62,76.8,9.881693148,Ecuador,Latin America & Caribbean,Upper middle income
+64,Egypt,EGY,African Group,27.0,30.0,166.0,56.82,71.825,,"Egypt, Arab Rep.",Middle East & North Africa,Lower middle income
+65,El Salvador,SLV,Latin American and Caribbean Group (GRULAC),13.8333,-88.9167,74.0,29.7,73.096,9.991146152999999,El Salvador,Latin America & Caribbean,Lower middle income
+66,Equatorial Guinea,GNQ,African Group,2.0,10.0,165.0,56.38,58.402,9.988013674,Equatorial Guinea,Sub-Saharan Africa,Upper middle income
+67,Eritrea,ERI,African Group,15.0,39.0,178.0,83.5,65.941,9.956838456,Eritrea,Sub-Saharan Africa,Low income
+68,Estonia,EST,Eastern European Group,59.0,26.0,14.0,12.61,78.243902439,9.981885468,Estonia,Europe & Central Asia,High income
+69,Ethiopia,ETH,African Group,8.0,38.0,99.0,32.82,66.24,9.572650375,Ethiopia,Sub-Saharan Africa,Low income
+70,Faroe Islands,FRO,,62.0,-7.0,,,82.5487804878,9.999402564,Faroe Islands,Europe & Central Asia,High income
+71,Fiji,FJI,Asia and the Pacific Group,-18.0,175.0,52.0,27.41,67.34100000000001,9.992193161,Fiji,East Asia & Pacific,Upper middle income
+72,Finland,FIN,Western European and Others Group (WEOG),64.0,26.0,2.0,7.93,81.7341463415,9.870047847,Finland,Europe & Central Asia,High income
+73,France,FRA,Western European and Others Group (WEOG),46.0,2.0,34.0,22.92,82.7243902439,9.765958091,France,Europe & Central Asia,High income
+74,French Guiana,GUF,,4.0,-53.0,,,,,,,
+75,French Polynesia,PYF,,-15.0,-140.0,,,77.462,9.998436752,French Polynesia,East Asia & Pacific,High income
+76,French Southern Territories,ATF,,-43.0,67.0,,,,,,,
+77,Gabon,GAB,African Group,-1.0,11.75,121.0,37.2,66.187,9.889885457,Gabon,Sub-Saharan Africa,Upper middle income
+78,Gambia,GMB,African Group,13.4667,-16.5667,87.0,30.62,61.735,9.99572735,"Gambia, The",Sub-Saharan Africa,Low income
+79,Georgia,GEO,Eastern European Group,42.0,43.5,60.0,28.59,73.6,9.97030427,Georgia,Europe & Central Asia,Upper middle income
+80,Germany,DEU,Western European and Others Group (WEOG),51.0,9.0,11.0,12.16,80.8926829268,9.850953828,Germany,Europe & Central Asia,High income
+81,Ghana,GHA,African Group,8.0,-2.0,30.0,22.26,63.78,9.902761527000001,Ghana,Sub-Saharan Africa,Lower middle income
+82,Gibraltar,GIB,,36.1833,-5.3667,,,,9.999996581,Gibraltar,Europe & Central Asia,High income
+83,Greece,GRC,Western European and Others Group (WEOG),39.0,22.0,65.0,28.8,81.787804878,9.944915378,Greece,Europe & Central Asia,High income
+84,Greenland,GRL,,72.0,-40.0,,,,9.82459485,Greenland,Europe & Central Asia,High income
+85,Grenada,GRD,Latin American and Caribbean Group (GRULAC),12.1167,-61.6667,,,72.384,9.999855556,Grenada,Latin America & Caribbean,Upper middle income
+86,Guadeloupe,GLP,,16.25,-61.5833,,,,,,,
+87,Guam,GUM,,13.4667,144.7833,,,79.859,9.999770085,Guam,East Asia & Pacific,High income
+88,Guatemala,GTM,Latin American and Caribbean Group (GRULAC),15.5,-90.25,116.0,35.74,74.063,9.954205977,Guatemala,Latin America & Caribbean,Upper middle income
+89,Guernsey,GGY,,49.5,-2.56,,,,,,,
+90,Guinea,GIN,African Group,11.0,-10.0,110.0,34.34,61.185,9.894992295,Guinea,Sub-Saharan Africa,Low income
+91,Guinea-Bissau,GNB,African Group,12.0,-15.0,94.0,32.06,58.003,9.987983759,Guinea-Bissau,Sub-Saharan Africa,Low income
+92,Guyana,GUY,Latin American and Caribbean Group (GRULAC),5.0,-59.0,49.0,26.63,69.774,9.915876913,Guyana,Latin America & Caribbean,Upper middle income
+93,Haiti,HTI,Latin American and Caribbean Group (GRULAC),19.0,-72.4167,83.0,30.2,63.66,9.988223075,Haiti,Latin America & Caribbean,Low income
+94,Heard Island and McDonald Islands,HMD,,-53.1,72.5167,,,,,,,
+95,Honduras,HND,Latin American and Caribbean Group (GRULAC),15.0,-86.5,148.0,48.2,75.08800000000001,9.95218461,Honduras,Latin America & Caribbean,Lower middle income
+96,Hong Kong,HKG,,22.25,114.1667,80.0,30.01,84.9341463415,,"Hong Kong SAR, China",East Asia & Pacific,High income
+97,Hungary,HUN,Eastern European Group,47.0,20.0,89.0,30.84,76.0658536585,9.961705978,Hungary,Europe & Central Asia,High income
+98,Iceland,ISL,Western European and Others Group (WEOG),65.0,-18.0,15.0,15.12,82.8609756098,9.957158969,Iceland,Europe & Central Asia,High income
+99,India,IND,Asia and the Pacific Group,20.0,77.0,142.0,45.33,69.416,8.73076993,India,South Asia,Lower middle income
+100,Indonesia,IDN,Asia and the Pacific Group,-5.0,120.0,119.0,36.82,71.509,9.226496487,Indonesia,East Asia & Pacific,Upper middle income
+101,Iran,IRN,Asia and the Pacific Group,32.0,53.0,173.0,64.81,76.479,,"Iran, Islamic Rep.",Middle East & North Africa,Upper middle income
+102,Iraq,IRQ,Asia and the Pacific Group,33.0,44.0,162.0,55.37,70.454,9.813090575,Iraq,Middle East & North Africa,Upper middle income
+103,Ireland,IRL,Western European and Others Group (WEOG),53.0,-8.0,13.0,12.6,82.256097561,9.97056068,Ireland,Europe & Central Asia,High income
+104,Isle of Man,IMN,,54.23,-4.55,,,,,Isle of Man,Europe & Central Asia,High income
+105,Israel,ISR,Western European and Others Group (WEOG),31.5,34.75,88.0,30.84,82.8024390244,9.99075299,Israel,Middle East & North Africa,High income
+106,Italy,ITA,Western European and Others Group (WEOG),42.8333,12.8333,41.0,23.69,83.3463414634,9.874299985,Italy,Europe & Central Asia,High income
+107,Jamaica,JAM,Latin American and Caribbean Group (GRULAC),18.25,-77.5,6.0,10.51,74.368,9.995372649,Jamaica,Latin America & Caribbean,Upper middle income
+108,Japan,JPN,Asia and the Pacific Group,36.0,138.0,66.0,28.86,84.2109756098,9.844231605,Japan,East Asia & Pacific,High income
+109,Jersey,JEY,,49.21,-2.13,,,,,,,
+110,Jordan,JOR,Asia and the Pacific Group,31.0,36.0,128.0,42.08,74.405,9.962291448,Jordan,Middle East & North Africa,Upper middle income
+111,Kazakhstan,KAZ,Asia and the Pacific Group,48.0,68.0,157.0,54.11,73.15,8.84615456,Kazakhstan,Europe & Central Asia,Upper middle income
+112,Kenya,KEN,African Group,1.0,38.0,103.0,33.72,66.342,9.756778602999999,Kenya,Sub-Saharan Africa,Lower middle income
+113,Kiribati,KIR,,1.4167,173.0,,,68.116,9.999654701,Kiribati,East Asia & Pacific,Lower middle income
+114,Kuwait,KWT,Asia and the Pacific Group,29.3375,47.6581,109.0,34.3,75.398,9.992385469,Kuwait,Middle East & North Africa,High income
+115,Kyrgyzstan,KGZ,Asia and the Pacific Group,41.0,75.0,82.0,30.19,71.4,9.918035032999999,Kyrgyz Republic,Europe & Central Asia,Lower middle income
+116,Laos,LAO,Asia and the Pacific Group,18.0,105.0,172.0,64.28,67.61,9.901368364,Lao PDR,East Asia & Pacific,Lower middle income
+117,Latvia,LVA,Eastern European Group,57.0,25.0,22.0,18.56,74.78292682930001,9.973398287,Latvia,Europe & Central Asia,High income
+118,Lebanon,LBN,Asia and the Pacific Group,33.8333,35.8333,102.0,33.19,78.875,9.995629059,Lebanon,Middle East & North Africa,Upper middle income
+119,Lesotho,LSO,African Group,-29.5,28.5,86.0,30.45,53.705,9.987030768,Lesotho,Sub-Saharan Africa,Lower middle income
+120,Liberia,LBR,African Group,6.5,-9.5,95.0,32.25,63.73,9.958838457,Liberia,Sub-Saharan Africa,Low income
+121,Libyan Arab Jamahiriya,LBY,African Group,25.0,17.0,164.0,55.77,72.72399999999999,9.247864011,Libya,Middle East & North Africa,Upper middle income
+122,Libyan Arab Jamahiriya,LBY,African Group,25.0,17.0,164.0,55.77,72.72399999999999,9.247864011,Libya,Middle East & North Africa,Upper middle income
+123,Liechtenstein,LIE,Western European and Others Group (WEOG),47.1667,9.5333,24.0,19.52,83.0414634146,9.999932479,Liechtenstein,Europe & Central Asia,High income
+124,Lithuania,LTU,Eastern European Group,56.0,24.0,28.0,21.19,75.6804878049,9.973214527,Lithuania,Europe & Central Asia,High income
+125,Luxembourg,LUX,Western European and Others Group (WEOG),49.75,6.1667,17.0,15.46,82.2951219512,9.998894017000001,Luxembourg,Europe & Central Asia,High income
+126,Macao,MAC,,22.1667,113.55,,,84.118,,"Macao SAR, China",East Asia & Pacific,High income
+127,Macedonia,MKD,Eastern European Group,41.8333,22.0,92.0,31.28,75.688,,North Macedonia,Europe & Central Asia,Upper middle income
+128,Madagascar,MDG,African Group,-20.0,47.0,54.0,27.68,66.681,9.751479457,Madagascar,Sub-Saharan Africa,Low income
+129,Malawi,MWI,African Group,-13.5,34.0,69.0,29.32,63.798,9.959795722,Malawi,Sub-Saharan Africa,Low income
+130,Malaysia,MYS,Asia and the Pacific Group,2.5,112.5,101.0,33.12,75.997,9.859594855,Malaysia,East Asia & Pacific,Upper middle income
+131,Maldives,MDV,Asia and the Pacific Group,3.25,73.0,79.0,29.93,78.627,9.99987265,Maldives,South Asia,Upper middle income
+132,Mali,MLI,African Group,17.0,-4.0,108.0,34.12,58.893,9.47863327,Mali,Sub-Saharan Africa,Low income
+133,Malta,MLT,Western European and Others Group (WEOG),35.8333,14.5833,81.0,30.16,82.4487804878,9.999864103,Malta,Middle East & North Africa,High income
+134,Marshall Islands,MHL,Asia and the Pacific Group,9.0,168.0,,,,9.999923932,Marshall Islands,East Asia & Pacific,Upper middle income
+135,Martinique,MTQ,,14.6667,-61.0,,,,,,,
+136,Mauritania,MRT,African Group,20.0,-12.0,97.0,32.54,64.704,9.559829861,Mauritania,Sub-Saharan Africa,Lower middle income
+137,Mauritius,MUS,African Group,-20.2833,57.55,56.0,28.0,74.4163414634,9.999133333,Mauritius,Sub-Saharan Africa,High income
+138,Mayotte,MYT,,-12.8333,45.1667,,,,9.999841026,,,
+139,Mexico,MEX,Latin American and Caribbean Group (GRULAC),23.0,-102.0,143.0,45.45,74.992,9.170940924,Mexico,Latin America & Caribbean,Upper middle income
+140,Micronesia,FSM,Asia and the Pacific Group,6.9167,158.25,,,67.755,,"Micronesia, Fed. Sts.",East Asia & Pacific,Lower middle income
+141,Moldova,MDA,Eastern European Group,47.0,29.0,91.0,31.16,71.808,9.985945297,Moldova,Europe & Central Asia,Lower middle income
+142,Monaco,MCO,Western European and Others Group (WEOG),43.7333,7.4,,,,10.0,Monaco,Europe & Central Asia,High income
+143,Mongolia,MNG,Asia and the Pacific Group,46.0,105.0,73.0,29.61,69.689,9.337607611000001,Mongolia,East Asia & Pacific,Lower middle income
+144,Montenegro,MNE,Eastern European Group,42.0,19.0,105.0,33.83,76.77,9.99409829,Montenegro,Europe & Central Asia,Upper middle income
+145,Montserrat,MSR,,16.75,-62.2,,,,,,,
+146,Morocco,MAR,African Group,32.0,-5.0,133.0,42.88,76.453,9.809274336,Morocco,Middle East & North Africa,Lower middle income
+147,Mozambique,MOZ,African Group,-18.25,35.0,104.0,33.79,60.163000000000004,9.663940985,Mozambique,Sub-Saharan Africa,Low income
+148,Myanmar,MMR,Asia and the Pacific Group,22.0,98.0,139.0,44.77,66.867,9.720718769,Myanmar,East Asia & Pacific,Lower middle income
+149,Myanmar,MMR,Asia and the Pacific Group,22.0,98.0,139.0,44.77,66.867,9.720718769,Myanmar,East Asia & Pacific,Lower middle income
+150,Namibia,NAM,African Group,-22.0,17.0,23.0,19.25,63.373000000000005,9.648167478,Namibia,Sub-Saharan Africa,Upper middle income
+151,Nauru,NRU,Asia and the Pacific Group,-0.5333,166.9167,,,,,Nauru,East Asia & Pacific,High income
+152,Nepal,NPL,Asia and the Pacific Group,28.0,84.0,112.0,35.1,70.47800000000001,9.938740163,Nepal,South Asia,Lower middle income
+153,Netherlands,NLD,Western European and Others Group (WEOG),52.5,5.75,5.0,9.96,81.81219512199999,9.985573503,Netherlands,Europe & Central Asia,High income
+154,Netherlands Antilles,ANT,,12.25,-68.75,,,,9.999658973999999,,,
+155,New Caledonia,NCL,,-21.5,165.5,,,77.1487804878,9.992188888,New Caledonia,East Asia & Pacific,High income
+156,New Zealand,NZL,Western European and Others Group (WEOG),-41.0,174.0,9.0,10.69,81.8585365854,9.885594858,New Zealand,East Asia & Pacific,High income
+157,Nicaragua,NIC,Latin American and Caribbean Group (GRULAC),13.0,-85.0,117.0,35.81,74.275,9.948723071,Nicaragua,Latin America & Caribbean,Lower middle income
+158,Niger,NER,African Group,16.0,8.0,57.0,28.25,62.023999999999994,9.457265746000001,Niger,Sub-Saharan Africa,Low income
+159,Nigeria,NGA,African Group,10.0,8.0,115.0,35.63,54.332,9.610782858,Nigeria,Sub-Saharan Africa,Lower middle income
+160,Niue,NIU,,-19.0333,-169.8667,,,,,,,
+161,Norfolk Island,NFK,,-29.0333,167.95,,,,,,,
+162,North Korea,PRK,Asia and the Pacific Group,40.0,127.0,180.0,85.82,72.095,,"Korea, Dem. People's Rep.",East Asia & Pacific,Low income
+163,Northern Mariana Islands,MNP,,15.2,145.75,,,,9.999804272999999,Northern Mariana Islands,East Asia & Pacific,High income
+164,Norway,NOR,Western European and Others Group (WEOG),62.0,10.0,1.0,7.84,82.7585365854,9.869966651,Norway,Europe & Central Asia,High income
+165,Oman,OMN,Asia and the Pacific Group,21.0,57.0,135.0,43.42,77.633,9.867735881,Oman,Middle East & North Africa,High income
+166,Pakistan,PAK,Asia and the Pacific Group,30.0,70.0,145.0,45.52,67.11399999999999,9.670564917,Pakistan,South Asia,Lower middle income
+167,Palau,PLW,Asia and the Pacific Group,7.5,134.5,,,,9.999804272999999,Palau,East Asia & Pacific,High income
+168,"Palestinian Territory, Occupied",PSE,Asia and the Pacific Group,32.0,35.25,137.0,44.09,73.895,,West Bank and Gaza,Middle East & North Africa,Lower middle income
+169,Panama,PAN,Latin American and Caribbean Group (GRULAC),9.0,-80.0,76.0,29.78,78.329,9.96823162,Panama,Latin America & Caribbean,High income
+170,Papua New Guinea,PNG,Asia and the Pacific Group,-6.0,147.0,46.0,23.93,64.263,9.806470917,Papua New Guinea,East Asia & Pacific,Lower middle income
+171,Paraguay,PRY,Latin American and Caribbean Group (GRULAC),-23.0,-58.0,100.0,32.97,74.131,9.830214509,Paraguay,Latin America & Caribbean,Upper middle income
+172,Peru,PER,Latin American and Caribbean Group (GRULAC),-10.0,-76.0,90.0,30.94,76.516,9.452992241,Peru,Latin America & Caribbean,Upper middle income
+173,Philippines,PHL,Asia and the Pacific Group,13.0,122.0,136.0,43.54,71.095,9.872577762,Philippines,East Asia & Pacific,Lower middle income
+174,Pitcairn,PCN,,-24.7,-127.4,,,,,,,
+175,Poland,POL,Eastern European Group,52.0,20.0,62.0,28.65,77.6024390244,9.869979471,Poland,Europe & Central Asia,High income
+176,Portugal,PRT,Western European and Others Group (WEOG),39.5,-8.0,10.0,11.83,81.3243902439,9.960898286,Portugal,Europe & Central Asia,High income
+177,Puerto Rico,PRI,,18.25,-66.5,,,79.778195122,9.996210256,Puerto Rico,Latin America & Caribbean,High income
+178,Qatar,QAT,Asia and the Pacific Group,25.5,51.25,129.0,42.51,80.1,9.995047863,Qatar,Middle East & North Africa,High income
+179,Romania,ROU,Eastern European Group,46.0,25.0,48.0,25.91,75.3585365854,9.901757253,Romania,Europe & Central Asia,High income
+180,Russia,RUS,Eastern European Group,60.0,100.0,149.0,48.92,72.65731707319999,3.0,Russian Federation,Europe & Central Asia,Upper middle income
+181,Rwanda,RWA,African Group,-2.0,30.0,155.0,50.34,68.7,9.989458118,Rwanda,Sub-Saharan Africa,Low income
+182,Saint Barthélemy,BLM,,,,,,,,,,
+183,Saint Lucia,LCA,Latin American and Caribbean Group (GRULAC),13.8833,-61.1333,,,76.057,9.999740171000001,St. Lucia,Latin America & Caribbean,Upper middle income
+184,Saint Martin (French part),MAF,,,,,,79.8707317073,,St. Martin (French part),Latin America & Caribbean,High income
+185,Saint Pierre and Miquelon,SPM,,46.8333,-56.3333,,,,,,,
+186,Saint Vincent and the Grenadines,VCT,Latin American and Caribbean Group (GRULAC),13.25,-61.2,,,72.415,9.999834188,St. Vincent and the Grenadines,Latin America & Caribbean,Upper middle income
+187,Samoa,WSM,Asia and the Pacific Group,-13.5833,-172.3333,21.0,18.25,73.187,9.998791452999999,Samoa,East Asia & Pacific,Upper middle income
+188,San Marino,SMR,Western European and Others Group (WEOG),43.7667,12.4167,,,,9.999975214,San Marino,Europe & Central Asia,High income
+189,Sao Tome and Principe,STP,African Group,1.0,7.0,,,70.17,9.999590598,São Tomé and Principe,Sub-Saharan Africa,Lower middle income
+190,Saudi Arabia,SAU,Asia and the Pacific Group,25.0,45.0,170.0,62.14,74.998,9.145299896000001,Saudi Arabia,Middle East & North Africa,High income
+191,Senegal,SEN,African Group,14.0,-14.0,47.0,23.99,67.665,9.917723067,Senegal,Sub-Saharan Africa,Lower middle income
+192,Serbia,SRB,Eastern European Group,44.0,21.0,93.0,31.62,75.8902439024,9.962239739,Serbia,Europe & Central Asia,Upper middle income
+193,Seychelles,SYC,African Group,-4.5833,55.6667,63.0,28.66,72.8414634146,9.999804272999999,Seychelles,Sub-Saharan Africa,High income
+194,Sierra Leone,SLE,African Group,8.5,-11.5,85.0,30.28,54.309,9.969394012999999,Sierra Leone,Sub-Saharan Africa,Low income
+195,Singapore,SGP,Asia and the Pacific Group,1.3667,103.8,158.0,55.23,83.1463414634,9.999702991,Singapore,East Asia & Pacific,High income
+196,Slovakia,SVK,Eastern European Group,48.6667,19.5,33.0,22.67,77.2658536585,9.979445297,Slovak Republic,Europe & Central Asia,High income
+197,Slovenia,SVN,Eastern European Group,46.0,15.0,32.0,22.64,81.3780487805,9.991394016000001,Slovenia,Europe & Central Asia,High income
+198,Solomon Islands,SLB,Asia and the Pacific Group,-8.0,159.0,,,72.835,9.988039315,Solomon Islands,East Asia & Pacific,Lower middle income
+199,Somalia,SOM,African Group,10.0,49.0,163.0,55.45,57.068000000000005,9.731906805,Somalia,Sub-Saharan Africa,Low income
+200,South Africa,ZAF,African Group,-29.0,24.0,31.0,22.41,63.857,9.482906774,South Africa,Sub-Saharan Africa,Upper middle income
+201,South Korea,KOR,Asia and the Pacific Group,37.0,127.5,42.0,23.7,82.6268292683,,"Korea, Rep.",East Asia & Pacific,High income
+202,South Korea,KOR,Asia and the Pacific Group,37.0,127.5,42.0,23.7,82.6268292683,,"Korea, Rep.",East Asia & Pacific,High income
+203,Spain,ESP,Western European and Others Group (WEOG),40.0,-4.0,29.0,22.16,83.4317073171,9.786761512,Spain,Europe & Central Asia,High income
+204,Sri Lanka,LKA,Asia and the Pacific Group,7.0,81.0,127.0,41.94,76.812,9.972381193,Sri Lanka,South Asia,Lower middle income
+205,Sudan,SDN,African Group,15.0,30.0,138.0,44.49,65.095,8.982906713,Sudan,Sub-Saharan Africa,Low income
+206,Sudan,SDN,African Group,15.0,30.0,159.0,55.33,65.095,8.982906713,Sudan,Sub-Saharan Africa,Low income
+207,Suriname,SUR,Latin American and Caribbean Group (GRULAC),4.0,-56.0,20.0,17.5,71.57,9.93333418,Suriname,Latin America & Caribbean,Upper middle income
+208,Svalbard and Jan Mayen,SJM,,78.0,20.0,,,,,,,
+209,Swaziland,SWZ,African Group,-26.5,31.5,141.0,45.15,59.401,9.992650426,Eswatini,Sub-Saharan Africa,Lower middle income
+210,Sweden,SWE,Western European and Others Group (WEOG),62.0,15.0,4.0,9.25,82.5585365854,9.824646132,Sweden,Europe & Central Asia,High income
+211,Switzerland,CHE,Western European and Others Group (WEOG),47.0,8.0,8.0,10.62,83.7536585366,9.982906836,Switzerland,Europe & Central Asia,High income
+212,Syrian Arab Republic,SYR,Asia and the Pacific Group,35.0,38.0,174.0,72.57,71.779,9.921526486,Syrian Arab Republic,Middle East & North Africa,Low income
+213,Taiwan*,TWN,,23.5,121.0,43.0,23.76,,,"Taiwan, China",East Asia & Pacific,High income
+214,Tajikistan,TJK,Asia and the Pacific Group,39.0,71.0,161.0,55.34,70.87899999999999,9.940188882000001,Tajikistan,Europe & Central Asia,Low income
+215,Tanzania,TZA,African Group,-6.0,35.0,124.0,40.25,65.015,9.6214538,Tanzania,Sub-Saharan Africa,Lower middle income
+216,Thailand,THA,Asia and the Pacific Group,15.0,100.0,140.0,44.94,76.931,9.781671767999999,Thailand,East Asia & Pacific,Upper middle income
+217,Timor-Leste,TLS,Asia and the Pacific Group,-8.55,125.5167,78.0,29.9,69.26,9.993646153,Timor-Leste,East Asia & Pacific,Lower middle income
+218,Togo,TGO,African Group,8.0,1.1667,71.0,29.33,60.76,9.976757262000001,Togo,Sub-Saharan Africa,Low income
+219,Tokelau,TKL,,-9.0,-172.0,,,,,,,
+220,Tonga,TON,Asia and the Pacific Group,-20.0,-175.0,50.0,27.27,70.801,9.999693162,Tonga,East Asia & Pacific,Upper middle income
+221,Trinidad and Tobago,TTO,Latin American and Caribbean Group (GRULAC),11.0,-61.0,36.0,23.22,73.38,9.997808547,Trinidad and Tobago,Latin America & Caribbean,High income
+222,Tunisia,TUN,African Group,34.0,9.0,72.0,29.45,76.505,9.933607684,Tunisia,Middle East & North Africa,Lower middle income
+223,Turkey,TUR,Western European and Others Group (WEOG),39.0,35.0,154.0,50.02,77.437,9.671099105,Turkey,Europe & Central Asia,Upper middle income
+224,Turkmenistan,TKM,Asia and the Pacific Group,40.0,60.0,179.0,85.44,68.07300000000001,9.799176044,Turkmenistan,Europe & Central Asia,Upper middle income
+225,Turks and Caicos Islands,TCA,,21.75,-71.5833,,,,9.999594872000001,Turks and Caicos Islands,Latin America & Caribbean,High income
+226,Tuvalu,TUV,Asia and the Pacific Group,-8.0,178.0,,,,9.999988034,Tuvalu,East Asia & Pacific,Upper middle income
+227,Uganda,UGA,African Group,1.0,32.0,125.0,40.95,62.973,9.915770075,Uganda,Sub-Saharan Africa,Low income
+228,Ukraine,UKR,Eastern European Group,49.0,32.0,96.0,32.52,71.5826829268,9.752423901,Ukraine,Europe & Central Asia,Lower middle income
+229,United Arab Emirates,ARE,Asia and the Pacific Group,24.0,54.0,131.0,42.69,77.814,9.964274355,United Arab Emirates,Middle East & North Africa,High income
+230,United Kingdom,GBR,Western European and Others Group (WEOG),54.0,-2.0,35.0,22.93,81.256097561,9.896611952999999,United Kingdom,Europe & Central Asia,High income
+231,United States,USA,Western European and Others Group (WEOG),38.0,-97.0,45.0,23.85,78.5390243902,6.085470462000001,United States,North America,High income
+232,Uruguay,URY,Latin American and Caribbean Group (GRULAC),-33.0,-56.0,19.0,15.79,77.77,9.925205973999999,Uruguay,Latin America & Caribbean,High income
+233,Uzbekistan,UZB,Asia and the Pacific Group,41.0,64.0,156.0,53.07,71.57300000000001,9.818205961,Uzbekistan,Europe & Central Asia,Lower middle income
+234,Vanuatu,VUT,Asia and the Pacific Group,-16.0,167.0,,,70.32300000000001,9.994791452000001,Vanuatu,East Asia & Pacific,Lower middle income
+235,Venezuela,VEN,Latin American and Caribbean Group (GRULAC),8.0,-66.0,147.0,45.66,72.128,9.623056364,"Venezuela, RB",Latin America & Caribbean,Upper middle income
+236,Vietnam,VNM,Asia and the Pacific Group,16.0,106.0,175.0,74.71,75.317,9.867492292,Vietnam,East Asia & Pacific,Lower middle income
+237,"Virgin Islands, British",VGB,,18.5,-64.5,,,,,British Virgin Islands,Latin America & Caribbean,High income
+238,"Virgin Islands, U.S.",VIR,,18.3333,-64.8333,,,79.5682926829,9.999851282,Virgin Islands (U.S.),Latin America & Caribbean,High income
+239,Wallis and Futuna,WLF,,-13.3,-176.2,,,,,,,
+240,Yemen,YEM,Asia and the Pacific Group,15.0,48.0,167.0,58.25,66.096,,"Yemen, Rep.",Middle East & North Africa,Low income
+241,Zambia,ZMB,African Group,-15.0,30.0,120.0,37.0,63.51,9.682312782,Zambia,Sub-Saharan Africa,Lower middle income
+242,Zimbabwe,ZWE,African Group,-20.0,30.0,126.0,40.95,61.195,9.834680322,Zimbabwe,Sub-Saharan Africa,Lower middle income
+243,Holy See,VAT,Western European and Others Group (WEOG),41.9,12.45,,,,,,,
+244,Saint Kitts and Nevis,KNA,Latin American and Caribbean Group (GRULAC),17.3333,-62.75,,,,9.999889743999999,St. Kitts and Nevis,Latin America & Caribbean,High income

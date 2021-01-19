@@ -14,7 +14,7 @@ import os
 def connect():
     DATABASE_URL = os.environ['DATABASE_URL']
     
-    """ Connect to the PostgreSQL database server """
+    # Connect to the PostgreSQL database server 
     conn = None
     try:
         # connect to the PostgreSQL server
@@ -87,8 +87,9 @@ def copy_from_stringio(conn, df, table):
     
 #API get method
 def get_from_api():
+    json_url = 'https://coronavirus-tracker-api.herokuapp.com/v2/locations'
     try:
-        response = requests.get('https://coronavirus-tracker-api.herokuapp.com/v2/locations?timelines=1')
+        response = requests.get(json_url)
         timeline_json = response.json()
         return timeline_json
     
