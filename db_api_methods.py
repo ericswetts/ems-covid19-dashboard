@@ -87,7 +87,7 @@ def copy_from_stringio(conn, df, table):
     
 #API get method
 def get_from_api():
-    json_url = 'https://coronavirus-tracker-api.herokuapp.com/v2/locations'
+    json_url = 'https://coronavirus-tracker-api.herokuapp.com/v2/locations?timelines=1'
     try:
         response = requests.get(json_url)
         timeline_json = response.json()
