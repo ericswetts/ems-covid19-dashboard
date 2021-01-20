@@ -87,12 +87,17 @@ def copy_from_stringio(conn, df, table):
     
 #API get method
 def get_from_api():
-    json_url = 'https://coronavirus-tracker-api.herokuapp.com/v2/locations?timelines=1'
     try:
+        json_url = 'https://coronavirus-tracker-api.herokuapp.com/v2/locations?timelines=1'
         response = requests.get(json_url)
         timeline_json = response.json()
         return timeline_json
-    
-    except Exception as e:
-        print('Error making API call: ', e)
-        return e
+    except requests.exceptions.Timeout as e:
+        print (f'Unable to connect to API URL: {e}')
+            # Maybe set up for a retry, or continue in a retry loop
+    except requests.exceptions.TooManyRedirects as e:
+        print(f'Broken URL. Actual error: {e}')
+        # Tell the user their URL was bad and try a different one
+    except requests.exceptions.RequestException as e:
+        print(f'Critical Error. Error: {e}')
+        raise SystemExit(e)
