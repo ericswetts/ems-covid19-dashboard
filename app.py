@@ -742,9 +742,9 @@ def update_boxplot_global(new_group, new_metric):
     pop_max = df_box['Population'].max()
     pop = df_box['Population']
     norm_min, norm_max  = 5, 40
-    df_box['pop_norm'] = (((norm_max - norm_min) * (pop - pop_min)) / (pop_max - pop_min)) + norm_min
+    # df_box['pop_norm'] = (((norm_max - norm_min) * (pop - pop_min)) / (pop_max - pop_min)) + norm_min
     # df_box['pop_norm'] = ((40 - 5) * (df_box['Population'] - df_box['Population'].min()) / (df_box['Population'].max() - df_box['Population'].min())) + 5
-
+    df_box['pop_norm'] = 5
     for grp in order:
 
         data = df_box.loc[df_box[new_group] == grp]
