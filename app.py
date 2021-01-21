@@ -736,10 +736,15 @@ def update_boxplot_global(new_group, new_metric):
     order = un_order if new_group == 'UN Group' else income_order
     
     hovertemplate = "<br>".join(["<b>Country</b>: %{customdata[0]}", "<b>Population</b>: %{customdata[1]}","<b>%{customdata[2]}</b>:%{y}", "<b>Group</b>:%{customdata[3]}"])
-
     i = 0
-    df_box['pop_norm'] = (40-5) * (df_box['Population'] - df_box['Population'].min()) / (df_box['Population'].max() - df_box['Population'].min()) + 5
-        
+
+    pop_min = df_box['Population'].min()
+    pop_max = df_box['Population'].max()
+    pop = df_box['Population']
+    norm_min, norm_max  = 5, 40
+    df_box['pop_norm'] = (((norm_max - norm_min) * (pop - pop_min)) / (pop_max - pop_min)) + norm_min
+    # df_box['pop_norm'] = ((40 - 5) * (df_box['Population'] - df_box['Population'].min()) / (df_box['Population'].max() - df_box['Population'].min())) + 5
+
     for grp in order:
 
         data = df_box.loc[df_box[new_group] == grp]
@@ -747,7 +752,6 @@ def update_boxplot_global(new_group, new_metric):
         data['metric'] = data[new_metric].name
         data['jitter'] = np.random.randint(0,7, size=len(data)) + (20 * i)
         data['jitter'] = np.where(data['Population'] == data['Population'].mean(), data['jitter'].median(), data['jitter'] )
-        data['pop_norm'].describe()    
         
         #customdata parameter to format hovertemplates
         cd = np.stack((data['Country'], data['Population'], data['metric'], data[new_group]), axis=-1)
