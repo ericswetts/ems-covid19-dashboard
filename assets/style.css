@@ -32,10 +32,10 @@
 /* the styles for the main content position it to the right of the sidebar and add some padding. */
 #tabs {
     position : relative;
-    margin-top: 34vh;
+    margin-top: 35vh;
     z-index : 0; 
-    font-size : 14px; 
-    padding-bottom : 5vh;
+    font-size : 14px;
+    background-color : 'white';
 }
 
 .intro-text {
@@ -50,3 +50,10 @@
     z-index: 2000;
     font-size: 14px
 }
+
+.tab-parent {
+    background-color: white;
+}
+
+
+

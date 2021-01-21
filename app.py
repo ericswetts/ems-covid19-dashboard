@@ -3,6 +3,7 @@
 
 # In[347]:
 from flask_sqlalchemy import SQLAlchemy
+from numpy.core.numeric import identity
 from pandas.io.parsers import read_csv
 import plotly.express as px
 import plotly.graph_objects as go
@@ -32,6 +33,11 @@ import locale
 locale.setlocale(locale.LC_ALL, '')  # Use '' for auto, or force e.g. to 'en_US.UTF-8'
 
 external_stylesheets = [dbc.themes.YETI]
+
+#Suppress CopyWityhSettings
+import warnings
+from pandas.core.common import SettingWithCopyWarning
+warnings.simplefilter(action="ignore", category=SettingWithCopyWarning)
 
 #Load reference CSV
 country_reference = pd.read_csv('./geodata/country_reference.csv')
@@ -102,7 +108,7 @@ chart_titles = {
         'Cases' : "Cumulative Cases", 
         'Cases per 1M' : 'Cumulative Cases (Per 1M) ',
         'New Cases (n)' : 'Daily New Cases',
-        'New Cases (SMA)' : 'Daily New Cases (SMoothed)',
+        'New Cases (SMA)' : 'Daily New Cases (Smoothed)',
           
         'Deaths': "Cumulative Deaths",
         'Deaths per 1M' : 'Cumulative Deaths (Per 1M)',
@@ -467,32 +473,42 @@ content_global = dbc.Container(
         dbc.Row([line_chart, top_15_table]),
         dbc.Row(boxplot_global)
     ],
-        className = 'content-global'
+        id = 'content-global'
     
 )
+
+content_country = dbc.Container(
+        [
+            dbc.Row([map_country, country_card_list]),
+            dbc.Row(country_card_description)
+            ], 
+            id = 'content-country'
+        )
 
 
 country_tab =  dcc.Tab(
     id = 'country-tab',
     value = 'country-tab',
     label='Country Focus',  
-    children = dbc.Container(
-        [dbc.Row([map_country, country_card_list]),
-        dbc.Row(country_card_description)]
-        )
+    children = content_country,
+    style={'backgroundColor': 'white'}
 )
 
 global_tab = dcc.Tab(
     id = 'global-tab', 
     label='Global Overview', 
     value='global-tab', 
-    children = content_global)
+    children = content_global,
+    style={'backgroundColor': 'white'}
+)
+
         
 tabs = dcc.Tabs(
-        id = 'tabs', 
+        id = 'tabs',
         value='global-tab', 
         children=[global_tab, country_tab], 
-        colors={ "border": "#2F4F4F", "primary": "ede712", "background": "#ede7c6" }
+        colors={ "border": "#2F4F4F", "primary": "ede712", "background": "#ede7c6" },
+        className = "pb-10 mb-10"
 )
 
 
@@ -547,14 +563,17 @@ app.layout = html.Div([
     introduction,
     controls_container,
     tabs
-])
+    ], 
+    id = 'app', 
+    style={'backgroundColor': '#EDE7C5', 'paddingBottom' : '5vh'}
+)
 
 # In[360]:
 
 
 #Callback function and Plotly components
 
-#Callback for Tab Layout
+#Callback for Tab Layout with Static header
 @app.callback(
     Output('controls-container', 'children'),
     Input('tabs', 'value')
@@ -623,7 +642,7 @@ def update_line_chart(new_date_id, new_metric, new_countries):
     fig = px.line(line_chart_df,
         x = 'Date', 
         y = new_metric, 
-        title = chart_titles[new_metric], 
+        title = chart_titles[new_metric] + ' by Country', 
         color = 'Country',
         text = new_metric, 
         template='gridon', 
@@ -706,11 +725,10 @@ def update_boxplot_global(new_group, new_metric):
     fig.update_layout(
         margin=dict(l=30, r=30, b=30, t=50, pad=20),
         yaxis_type = 'log', 
-        yaxis_title = 'Cases')
-    fig.update_layout(title = chart_titles[new_metric] + ' ' + 'Distribution by ' + new_group)
+        yaxis_title = new_metric)
+    fig.update_layout(title = 'Distribution of ' + chart_titles[new_metric] + ' ' + 'by ' + new_group + ' and Country')
     fig.update_layout(legend=dict(x=0, y=1, traceorder='normal', font=dict(size=12)))
     fig.add_annotation(xref="paper", yref="paper",x=0, y=0, text="*Point sizes reflect country population", showarrow=False)
-            # yshift=10)
 
     colors = ["#8f3985","#98dfea","#07beb8","#efd9ce","#937b63","#8a9b68","#ff5e5b","#25283d"]
     income_order = ['Low income', 'Lower middle income', 'Upper middle income', 'High income']
@@ -749,9 +767,8 @@ def update_boxplot_global(new_group, new_metric):
             
         ))
     
-        fig.update_layout(bargap = 1)
+        # fig.update_layout(bargap = 1)
         fig.update_traces(hovertemplate= hovertemplate)
-
 
         fig.update_layout(template='plotly_white')
         
@@ -785,50 +802,52 @@ def update_boxplot_global(new_group, new_metric):
     Input('metric-dropdown-country', 'value')]
 )
 def update_country_map(iso3, new_metric):
+    try: 
+        #Helper Function for color scale
+        def max_range(x,y):
+            return (x if x > y else y)
+        
+        #Helper Function
+        def metric_for_global_map(new_metric):
+            if new_metric == 'New Cases (SMA)' : return 'New Cases (n)'
+            if new_metric == 'New Deaths (SMA)' : return 'New Deaths (n)'
+            return new_metric
+        
+        new_metric = metric_for_global_map(new_metric)
+        
+        filtered_df = df.loc[(df['Date']  == df['Date'].max())]
+        
+        #Centering and Zoom height variables
+        projection = country_reference.loc[country_reference['ISO-3'] == iso3, 'Projection'].item()
+        lat = country_reference.loc[country_reference['ISO-3'] == iso3, 'Lat'].item()
+        lon = country_reference.loc[country_reference['ISO-3'] == iso3, 'Lon'].item()
+        color_scale_min = filtered_df[new_metric].min()
+        color_scale_max = max_range(filtered_df[new_metric].max(), 200)
+        
+        fig = px.choropleth(filtered_df,
+                    locations = "ISO-3",               
+                    color = new_metric,
+                    hover_name = "Country",  
+                    color_continuous_scale = 'algae',
+                    range_color = (color_scale_min, color_scale_max),
+                    title = '{} by Country'.format(new_metric), 
+                    template = 'plotly_white'
+        )
     
-    #Helper Function for color scale
-    def max_range(x,y):
-        return (x if x > y else y)
-    
-    #Helper Function
-    def metric_for_global_map(new_metric):
-        if new_metric == 'New Cases (SMA)' : return 'New Cases (n)'
-        if new_metric == 'New Deaths (SMA)' : return 'New Deaths (n)'
-        return new_metric
-    
-    new_metric = metric_for_global_map(new_metric)
-    
-    filtered_df = df.loc[(df['Date']  == df['Date'].max())]
-    
-    #Centering and Zoom height variables
-    projection = country_reference.loc[country_reference['ISO-3'] == iso3, 'Projection'].item()
-    lat = country_reference.loc[country_reference['ISO-3'] == iso3, 'Lat'].item()
-    lon = country_reference.loc[country_reference['ISO-3'] == iso3, 'Lon'].item()
-    color_scale_min = filtered_df[new_metric].min()
-    color_scale_max = max_range(filtered_df[new_metric].max(), 200)
-    
-    fig = px.choropleth(filtered_df,
-                locations = "ISO-3",               
-                color = new_metric,
-                hover_name = "Country",  
-                color_continuous_scale = 'algae',
-                range_color = (color_scale_min, color_scale_max),
-                title = '{} by Country'.format(new_metric), 
-                template = 'plotly_white'
-    )
-   
-    # Custom fitbounds using center properties
-    fig.update_geos(center_lon = lon, center_lat = lat)
-    fig.update_geos(lataxis_showgrid=True, lonaxis_showgrid=True)
-    
-    fig.update_geos(projection_type="natural earth")
-    fig.update_layout(height=450, margin={"r":10,"t":30,"l":10,"b":30})
-    fig.update_layout(transition_duration=500)
-    fig.update_layout(title_x=0.3, title_font_size = 16)
-    fig.update_layout(coloraxis_colorbar = dict(thickness = 8))
-    fig.update_geos(projection_scale=projection)
-    
-    return fig
+        # Custom fitbounds using center properties
+        fig.update_geos(center_lon = lon, center_lat = lat)
+        fig.update_geos(lataxis_showgrid=True, lonaxis_showgrid=True)
+        
+        fig.update_geos(projection_type="natural earth")
+        fig.update_layout(height=450, margin={"r":10,"t":30,"l":10,"b":30})
+        fig.update_layout(transition_duration=500)
+        fig.update_layout(title_x=0.3, title_font_size = 16)
+        fig.update_layout(coloraxis_colorbar = dict(thickness = 8))
+        fig.update_geos(projection_scale=projection)
+        
+        return fig
+    except Exception as e:
+        print (f'fuckme: {e}')
 
 @app.callback(
     [Output('country-card-description', 'children'),
@@ -880,7 +899,8 @@ def update_country_card(iso3, new_metric, new_group):
             [html.H3('Country Overview', className = 'card-title'),
             html.P(country_card_text, className = 'card-text')
             ], 
-            style = {'border': 'none'}
+            style = {'border': 'none', 'marginBottom' : '5vh'}, 
+            
         )
 
     country_card_list_content = dbc.ListGroup(
