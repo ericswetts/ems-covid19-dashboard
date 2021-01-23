@@ -721,6 +721,7 @@ def update_boxplot_global(new_group, new_metric):
     df_box = df_filtered.merge(group, how = 'left', on = 'ISO-3', copy = False)
     df_box.dropna(axis = 0, how = 'any', inplace = True)
 
+    print('columns: ' + df_box.columns)
     fig = go.Figure()
     fig.update_layout(
         margin=dict(l=30, r=30, b=30, t=50, pad=20),
@@ -762,11 +763,13 @@ def update_boxplot_global(new_group, new_metric):
             y = data[new_metric],
             name=str(grp),
             orientation = 'v',
-            pointpos= 0, # Shows data point 
-            boxpoints= None, # represent all points
+            pointpos= 2, # Shows data point 
+            boxpoints= 'all', # represent all points
             fillcolor = colors[i],
+            marker_color = colors[i],
+            marker_line=dict( width = 1, color = 'black'),
             line=dict( width = 2, color = 'black'),
-            width = 1,
+            width = 0.2,
             customdata = cd
             
         ))
@@ -776,20 +779,20 @@ def update_boxplot_global(new_group, new_metric):
 
         fig.update_layout(template='plotly_white')
         
-        fig.add_trace(go.Scatter(
-            y = data[new_metric],
-            x = data['jitter'],
-            mode = 'markers', 
-            orientation = 'v',
-            marker=dict(size = data['pop_norm'], color = colors[i], line = dict( width = 2, color = 'black')),
-            showlegend = False, 
-            customdata = cd
-    #         showxaxis = False, 
-    #         x0=10, 
-    #         dx=1,
-    # #         y = [1,2,3,4]
-        ))
-        fig.update_traces(hovertemplate= hovertemplate)
+    #     fig.add_trace(go.Scatter(
+    #         y = data[new_metric],
+    #         x = data['jitter'],
+    #         mode = 'markers', 
+    #         orientation = 'v',
+    #         marker=dict(size = data['pop_norm'], color = colors[i], line = dict( width = 2, color = 'black')),
+    #         showlegend = False, 
+    #         customdata = cd
+    # #         showxaxis = False, 
+    # #         x0=10, 
+    # #         dx=1,
+    # # #         y = [1,2,3,4]
+    #     ))
+    #     fig.update_traces(hovertemplate= hovertemplate)
             
         i += 1
 
