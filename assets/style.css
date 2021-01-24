@@ -32,10 +32,17 @@
 /* the styles for the main content position it to the right of the sidebar and add some padding. */
 #tabs {
     position : relative;
-    margin-top: 35vh;
     z-index : 0; 
     font-size : 14px;
     background-color : 'white';
+}
+
+.tabs-country-shift{
+    margin-top: 23vh !important;
+}
+
+.tabs-global-shift{
+    margin-top: 37vh !important;
 }
 
 .intro-text {

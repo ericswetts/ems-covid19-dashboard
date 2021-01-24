@@ -587,7 +587,15 @@ app.layout = html.Div([
 
 #Callback function and Plotly components
 
-#Callback for Tab Layout with Static header
+#Callback to adjust controls / layout content
+@app.callback(
+    Output('tabs', 'className'),
+    Input('tabs', 'value')
+)
+def adjust_top_margin(tab):
+    return 'tabs-country-shift' if tab == 'country-tab' else 'tabs-global-shift'
+
+#Callback for Tab Layout with Sticky Controls header
 @app.callback(
     Output('controls-container', 'children'),
     Input('tabs', 'value')
@@ -937,7 +945,7 @@ def update_country_card(iso3, new_metric, new_group):
 # a = random.randint(1000,5000)
 # app.run_server(mode = 'external', port = a, debug = True)
 if __name__ == '__main__':
-    app.run_server(debug=True, port = 8373)
+    app.run_server(debug=True, port = 8353)
 
 
 # In[ ]:
