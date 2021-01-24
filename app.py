@@ -13,14 +13,11 @@ import dash_html_components as html
 from dash.dependencies import Input, Output, State
 import pandas as pd
 import numpy as np
-# import json
-# import requests
 import dash_table
 
 #for Heroku Flask deployment
 from flask_sqlalchemy import SQLAlchemy
 from flask import Flask
-
 
 #import data preprocessing function
 from db_api_methods import get_from_db
@@ -710,7 +707,6 @@ def update_top_15_headers(new_date, new_metric):
 )
 def show_selected_date(date_id):
      dt = pd.to_datetime(unique_dates.loc[date_id, ['Date']].iloc[0]).date().strftime("%B %d, %Y")
-     print(dt)
      return (f'Currently Selected Date: {dt}')
 
 #Callback to update global boxplots
@@ -735,7 +731,6 @@ def update_boxplot_global(new_group, new_metric):
     df_box = df_filtered.merge(group, how = 'left', on = 'ISO-3', copy = False)
     df_box.dropna(axis = 0, how = 'any', inplace = True)
 
-    print('columns: ' + df_box.columns)
     fig = go.Figure()
     fig.update_layout(
         margin=dict(l=30, r=30, b=30, t=50, pad=20),
@@ -788,25 +783,8 @@ def update_boxplot_global(new_group, new_metric):
             
         ))
     
-        # fig.update_layout(bargap = 1)
         fig.update_traces(hovertemplate= hovertemplate)
-
         fig.update_layout(template='plotly_white')
-        
-    #     fig.add_trace(go.Scatter(
-    #         y = data[new_metric],
-    #         x = data['jitter'],
-    #         mode = 'markers', 
-    #         orientation = 'v',
-    #         marker=dict(size = data['pop_norm'], color = colors[i], line = dict( width = 2, color = 'black')),
-    #         showlegend = False, 
-    #         customdata = cd
-    # #         showxaxis = False, 
-    # #         x0=10, 
-    # #         dx=1,
-    # # #         y = [1,2,3,4]
-    #     ))
-    #     fig.update_traces(hovertemplate= hovertemplate)
             
         i += 1
 
@@ -823,52 +801,50 @@ def update_boxplot_global(new_group, new_metric):
     Input('metric-dropdown-country', 'value')]
 )
 def update_country_map(iso3, new_metric):
-    try: 
-        #Helper Function for color scale
-        def max_range(x,y):
-            return (x if x > y else y)
-        
-        #Helper Function
-        def metric_for_global_map(new_metric):
-            if new_metric == 'New Cases (SMA)' : return 'New Cases (n)'
-            if new_metric == 'New Deaths (SMA)' : return 'New Deaths (n)'
-            return new_metric
-        
-        new_metric = metric_for_global_map(new_metric)
-        
-        filtered_df = df.loc[(df['Date']  == df['Date'].max())]
-        
-        #Centering and Zoom height variables
-        projection = country_reference.loc[country_reference['ISO-3'] == iso3, 'Projection'].item()
-        lat = country_reference.loc[country_reference['ISO-3'] == iso3, 'Lat'].item()
-        lon = country_reference.loc[country_reference['ISO-3'] == iso3, 'Lon'].item()
-        color_scale_min = filtered_df[new_metric].min()
-        color_scale_max = max_range(filtered_df[new_metric].max(), 200)
-        
-        fig = px.choropleth(filtered_df,
-                    locations = "ISO-3",               
-                    color = new_metric,
-                    hover_name = "Country",  
-                    color_continuous_scale = 'algae',
-                    range_color = (color_scale_min, color_scale_max),
-                    title = '{} by Country'.format(new_metric), 
-                    template = 'plotly_white'
-        )
+
+    #Helper Function for color scale
+    def max_range(x,y):
+        return (x if x > y else y)
     
-        # Custom fitbounds using center properties
-        fig.update_geos(center_lon = lon, center_lat = lat)
-        fig.update_geos(lataxis_showgrid=True, lonaxis_showgrid=True)
-        
-        fig.update_geos(projection_type="natural earth")
-        fig.update_layout(height=450, margin={"r":10,"t":30,"l":10,"b":30})
-        fig.update_layout(transition_duration=500)
-        fig.update_layout(title_x=0.3, title_font_size = 16)
-        fig.update_layout(coloraxis_colorbar = dict(thickness = 8))
-        fig.update_geos(projection_scale=projection)
-        
-        return fig
-    except Exception as e:
-        print (f'fuckme: {e}')
+    #Helper Function
+    def metric_for_global_map(new_metric):
+        if new_metric == 'New Cases (SMA)' : return 'New Cases (n)'
+        if new_metric == 'New Deaths (SMA)' : return 'New Deaths (n)'
+        return new_metric
+    
+    new_metric = metric_for_global_map(new_metric)
+    
+    filtered_df = df.loc[(df['Date']  == df['Date'].max())]
+    
+    #Centering and Zoom height variables
+    projection = country_reference.loc[country_reference['ISO-3'] == iso3, 'Projection'].item()
+    lat = country_reference.loc[country_reference['ISO-3'] == iso3, 'Lat'].item()
+    lon = country_reference.loc[country_reference['ISO-3'] == iso3, 'Lon'].item()
+    color_scale_min = filtered_df[new_metric].min()
+    color_scale_max = max_range(filtered_df[new_metric].max(), 200)
+    
+    fig = px.choropleth(filtered_df,
+                locations = "ISO-3",               
+                color = new_metric,
+                hover_name = "Country",  
+                color_continuous_scale = 'algae',
+                range_color = (color_scale_min, color_scale_max),
+                title = '{} by Country'.format(new_metric), 
+                template = 'plotly_white'
+    )
+
+    # Custom fitbounds using center properties
+    fig.update_geos(center_lon = lon, center_lat = lat)
+    fig.update_geos(lataxis_showgrid=True, lonaxis_showgrid=True)
+    
+    fig.update_geos(projection_type="natural earth")
+    fig.update_layout(height=450, margin={"r":10,"t":30,"l":10,"b":30})
+    fig.update_layout(transition_duration=500)
+    fig.update_layout(title_x=0.3, title_font_size = 16)
+    fig.update_layout(coloraxis_colorbar = dict(thickness = 8))
+    fig.update_geos(projection_scale=projection)
+    
+    return fig
 
 @app.callback(
     [Output('country-card-description', 'children'),
@@ -886,7 +862,6 @@ def update_country_card(iso3, new_metric, new_group):
     new_country =  country_reference.loc[country_reference['ISO-3'] == iso3, 'Country'].iloc[0]
     df_c = df[df['ISO-3'] == iso3]
     last_two_weeks = df_c.loc[:, ['New Deaths (SMA)','New Cases (SMA)', 'Date']].tail(14)
-#     print(last_two_weeks)
     pct_deaths_two_weeks = round((last_two_weeks.loc[:,'New Deaths (SMA)'].iloc[0] / last_two_weeks.loc[:,'New Deaths (SMA)'].iloc[13] * 100 ) - 100, 2)
     pct_cases_two_weeks = round((last_two_weeks.loc[:,'New Cases (SMA)'].iloc[0] / last_two_weeks.loc[:,'New Cases (SMA)'].iloc[13] * 100) - 100, 2)
     days_since_first_case = (df_c['Date'].max() - df_c['Date'].min()).days
@@ -909,12 +884,10 @@ def update_country_card(iso3, new_metric, new_group):
     un_group = country_reference.loc[country_reference['ISO-3'] == iso3, 'UN Group'].iloc[0]
     income_group = country_reference.loc[country_reference['ISO-3'] == iso3, 'Income Group'].iloc[0]
 
-    print(un_group,income_group )
-    country_card_text = "{} reported its first case on {}. The country has reported a total of {} cases and {} deaths. \
-    Currently, COVID-19 transmission is {} in {}, as the number of new cases per day is {}. \
-    In the past two weeks, the average daily case count in {} has {} by {}%, and the death rate has {} by {}%."\
-        .format(new_country, first_case_date, country_cases, country_deaths, under_control, new_country, new_cases, new_country,
-               trend(pct_cases_two_weeks), pct_cases_two_weeks, trend(pct_deaths_two_weeks), pct_deaths_two_weeks)
+    country_card_text = (f"{new_country} reported its first case on {first_case_date}. The country has reported a total of {country_cases:n} " 
+    f"cases and {country_deaths:n} deaths. Currently, COVID-19 transmission is {under_control} in {new_country}, and the number of new cases " 
+    f"per day is approximately {new_cases:n}. In the past two weeks, the average daily case count in {new_country} has {trend(pct_cases_two_weeks)} by " 
+    f"{pct_cases_two_weeks}%, and the death rate has {trend(pct_deaths_two_weeks)} by {pct_deaths_two_weeks}%.")
     
     country_card_description_content = dbc.Card(
             [html.H3('Country Overview', className = 'card-title'),
