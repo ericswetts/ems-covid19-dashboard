@@ -132,7 +132,7 @@ country_card_list = dbc.Col(
 #Country Tab Single Country Dropdown
 country_dropdown_country = dbc.Col( 
     children = [
-        html.Label(html.H5('Countries')),
+        html.Label('Countries'),
         dcc.Dropdown(
             id = 'country-dropdown-country',
             options = [{'label': country, 'value' : iso} for country, iso in available_countries],
@@ -161,7 +161,7 @@ map_country = dbc.Col(
 
 metric_dropdown_country = dbc.Col(
     children = [
-    html.Label(html.H5('Select a Country')),   
+    html.Label('Country'),   
     dcc.Dropdown(
         id = 'metric-dropdown-country',
         options = [
@@ -197,7 +197,7 @@ country_card_description = dbc.Col(id = 'country-card-description', width = 12)
 
 group_dropdown_global = dbc.Col(
     children = [ 
-        html.Label('Country Grouping (boxplots and scatterplots)'),
+        html.Label('Country Grouping (Boxplot)'),
         dcc.Dropdown(
             id = 'group-dropdown-global',
             options = [
@@ -215,17 +215,19 @@ group_dropdown_global = dbc.Col(
 
 group_dropdown_country = dbc.Col(
     children = [ 
-        html.Label('Country Grouping (boxplots and scatterplots)'),
+        html.Label('Country Grouping'),
         dcc.Dropdown(
             id = 'group-dropdown-country',
             options = [
-                {'label': 'Income Group', 'value': 'Income Group'},
-                {'label': 'UN Region', 'value': 'UN Group'}
+            #     {'label': 'Income Group', 'value': 'Income Group'},
+            #     {'label': 'UN Region', 'value': 'UN Group'}
+                {'label': 'Coming Soon!', 'value': 'Coming Soon!'}
             ],
-            value = 'Income Group',
+            value = 'Coming Soon!',
             persistence = True, 
             persistence_type = 'memory',
-            clearable = False)],
+            clearable = False,
+            disabled=True)],
     width = 3
     # xs = 12,
     # md = 3
@@ -273,7 +275,7 @@ fast_fact_card = dbc.Col(
 #Metric Dropdown
 metric_dropdown_global = dbc.Col(
     children = [
-    html.Label('Metrics', style = {"fontSize" : '14px'}),   
+    html.Label('Metric (Map, Linechart, and Boxplot)', style = {"fontSize" : '14px'}),   
     dcc.Dropdown(
         id = 'metric-dropdown-global',
         options = [
@@ -302,7 +304,7 @@ metric_dropdown_global = dbc.Col(
 #Country Dropdown
 country_dropdown_global = dbc.Col( 
     children = [
-        html.Label('Countries'),
+        html.Label('Countries (Map, Linechart, and Boxplot)'),
         dcc.Dropdown(
             id = 'country-dropdown-global',
             options = [{'label': i, 'value' : i} for i in countries],
@@ -339,7 +341,8 @@ date_slider = dbc.Col(
             persistence_type = 'memory'
         )
     ],
-    width = 12
+    width = 12,
+    style = {'marginTop': '2vh'}
 )
 
 
@@ -371,13 +374,13 @@ boxplot_global = dbc.Col(
 
 #Dash Datatable (Global)
 top_15_table = dbc.Col([
-    html.Label(id = 'top-15-title', style = {'fontSize': '18px'}),
+    html.Label(id = 'top-15-title', style = {'fontSize': 16, 'paddingTop': '1vh', 'font-weight' : 'bold'}),
     dash_table.DataTable(
         id='top_15',
         columns = [ {'name' : i , 'id' : i} for i in start_top_15.columns],
         data=start_top_15.to_dict('records'),
         style_as_list_view = True,
-        style_table={'height': '320px', 'overflowY': 'hidden'},
+        style_table={'height': '310px', 'overflowY': 'hidden'},
         fixed_rows={'headers': True},
 
         style_data = {
@@ -388,7 +391,7 @@ top_15_table = dbc.Col([
         style_header = {
             'backgroundColor': 'white',
             'padding' : '5px',
-            'font_size': '14px',
+            'font_size': '12px',
             'text_align': 'left', 
             'font_weight' : 'bold'
         }, 
@@ -396,7 +399,7 @@ top_15_table = dbc.Col([
         style_cell = {
             'whiteSpace': 'normal',
             'height': 'auto',
-            'lineHeight': '15px'
+            'lineHeight': '14px'
         }
         ,style_cell_conditional= [{
             'if': {'column_id': 'Country'},
@@ -635,8 +638,8 @@ def update_map(new_date_id, new_metric):
     fig.update_geos(projection_type="natural earth")
     fig.update_layout(height=450, margin={"r":10,"t":30,"l":10,"b":30})
     fig.update_layout(transition_duration=500)
-    fig.update_layout(title_x=0.3, title_font_size = 16)
     fig.update_layout(coloraxis_colorbar = dict(thickness = 8))
+    fig.update_layout(title_x = 0)
 
     return fig
 
@@ -666,6 +669,8 @@ def update_line_chart(new_date_id, new_metric, new_countries):
 
     fig.update_traces(mode='lines')
     fig.update_layout(hovermode='closest', font_size = 14, title_font_size = 16)
+    fig.update_layout(title = {'x': 0})
+    fig.update_layout(template = 'plotly_white')
 
     return fig
 
@@ -707,7 +712,7 @@ def update_top_15_headers(new_date, new_metric):
 )
 def show_selected_date(date_id):
      dt = pd.to_datetime(unique_dates.loc[date_id, ['Date']].iloc[0]).date().strftime("%B %d, %Y")
-     return (f'Currently Selected Date: {dt}')
+     return html.Label(f'Date Selector (Map & Linechart) || Selected Date: {dt}')
 
 #Callback to update global boxplots
 
