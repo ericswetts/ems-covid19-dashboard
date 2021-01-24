@@ -142,7 +142,9 @@ country_dropdown_country = dbc.Col(
             style = {'fontSize': '14px'}, 
             value = 'USA', 
             optionHeight = 22, 
-            clearable = False
+            clearable = False,
+            persistence = True, 
+            persistence_type = 'memory'
         )
     ],
     xs = 12,
@@ -178,8 +180,10 @@ metric_dropdown_country = dbc.Col(
             {'label':'Daily Deaths (n)', 'value': 'New Deaths (n)'},
             {'label':'Daily Deaths (Smoothed)', 'value':'New Deaths (SMA)'},
         ],
-    value='Cases',
-    optionHeight = 22
+        value='Cases',
+        optionHeight = 22,
+        persistence = True, 
+        persistence_type = 'memory'
     )
     ],
     xs = 12,
@@ -204,7 +208,9 @@ group_dropdown_global = dbc.Col(
                 {'label': 'UN Region', 'value': 'UN Group'}
             ],
             value = 'Income Group',
-        clearable = False)],
+            persistence = True, 
+            persistence_type = 'memory',
+            clearable = False)],
     width = 3
     # xs = 12,
     # md = 3
@@ -220,7 +226,9 @@ group_dropdown_country = dbc.Col(
                 {'label': 'UN Region', 'value': 'UN Group'}
             ],
             value = 'Income Group',
-        clearable = False)],
+            persistence = True, 
+            persistence_type = 'memory',
+            clearable = False)],
     width = 3
     # xs = 12,
     # md = 3
@@ -285,7 +293,9 @@ metric_dropdown_global = dbc.Col(
             {'label':'Daily Deaths (Smoothed)', 'value':'New Deaths (SMA)'},
         ],
     value='Deaths',
-    optionHeight = 22
+    optionHeight = 22,
+    persistence = True, 
+    persistence_type = 'memory'
     )
     ],
     xs = 12,
@@ -302,7 +312,9 @@ country_dropdown_global = dbc.Col(
             multi = True, 
             style = {'fontSize': '14px'}, 
             value = ['Brazil', 'France', 'Italy', 'United States'], 
-            optionHeight = 22
+            optionHeight = 22,
+            persistence = True, 
+            persistence_type = 'memory'
         )
     ],
     xs = 12,
@@ -325,7 +337,9 @@ date_slider = dbc.Col(
             max = slider_max,
             step = 1,
             value = 0,
-            marks = slider_tick_labels
+            marks = slider_tick_labels,
+            persistence = True, 
+            persistence_type = 'memory'
         )
     ],
     width = 12
