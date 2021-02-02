@@ -428,12 +428,25 @@ page_copy = dbc.Col(
     }
 )
 
-header = html.Div(children = [html.H3('Coronavirus 2019 Dashboard +++')], 
+#Disclaimer for Mobile Devices (Passed through header
+mobile_warning = dbc.Row(
+    dbc.Col(
+        html.H4("Oh no! This dashboard is not optimized for mobile devices. \
+            Please view on a laptop computer for a better experience. Thanks!",
+            style = {'color': '#ff0000', 'fontWeight': 'bold'}
+        )
+    ),
+    className='d-lg-none'
+)
+
+header = html.Div(children = [html.H3('Coronavirus 2019 Dashboard +++'), mobile_warning], 
                  style = {
                      'backgroundColor': '#ede7c6',
                      'padding': '15px', 
                      'color' : '##efd9ce'
                  })
+
+
 
 
 
@@ -529,6 +542,8 @@ tabs = dcc.Tabs(
 
 
 
+
+
 ### END APP LAYOUT
 
 # In[357]:
@@ -571,7 +586,6 @@ introduction = html.Div(
     className = 'intro-text'
 )
 
-#Controls Header
 
 app.layout = html.Div([
     introduction,
