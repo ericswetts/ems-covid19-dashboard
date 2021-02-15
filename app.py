@@ -335,7 +335,7 @@ date_slider = dbc.Col(
             min = slider_min,
             max = slider_max,
             step = 1,
-            value = 0,
+            value = slider_max,
             marks = slider_tick_labels,
             persistence = True, 
             persistence_type = 'memory'
@@ -764,8 +764,8 @@ def update_boxplot_global(new_group, new_metric):
         yaxis_type = 'log', 
         yaxis_title = new_metric)
     fig.update_layout(title = 'Distribution of ' + chart_titles[new_metric] + ' ' + 'by ' + new_group + ' and Country')
-    fig.update_layout(legend=dict(x=0, y=1, traceorder='normal', font=dict(size=12)))
-    fig.add_annotation(xref="paper", yref="paper",x=0, y=0, text="*Point sizes reflect country population", showarrow=False)
+    # fig.update_layout(legend=dict(x=0, y=1, traceorder='normal', font=dict(size=12)))
+    # fig.add_annotation(xref="paper", yref="paper",x=0, y=1, text="*Point sizes reflect country population", showarrow=False)
 
     colors = ["#8f3985","#98dfea","#07beb8","#efd9ce","#937b63","#8a9b68","#ff5e5b","#25283d"]
     income_order = ['Low income', 'Lower middle income', 'Upper middle income', 'High income']
@@ -815,7 +815,7 @@ def update_boxplot_global(new_group, new_metric):
             
         i += 1
 
-    fig.update_xaxes(visible=False)
+    # fig.update_xaxes(visible=False)
 
     return fig
 
