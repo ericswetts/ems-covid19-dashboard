@@ -32,9 +32,9 @@ locale.setlocale(locale.LC_ALL, '')  # Use '' for auto, or force e.g. to 'en_US.
 external_stylesheets = [dbc.themes.YETI]
 
 #Suppress CopyWityhSettings
-import warnings
-from pandas.core.common import SettingWithCopyWarning
-warnings.simplefilter(action="ignore", category=SettingWithCopyWarning)
+# import warnings
+# from pandas.core.common import SettingWithCopyWarning
+# warnings.simplefilter(action="ignore", category=SettingWithCopyWarning)
 
 #Load reference CSV
 country_reference = pd.read_csv('./geodata/country_reference.csv')
